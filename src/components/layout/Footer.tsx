@@ -4,7 +4,8 @@ import { Zap, Linkedin, Twitter, Mail } from "lucide-react";
 const FOOTER_LINKS = {
   Product: [
     { href: "/agents", label: "All Agents" },
-    { href: "/demo", label: "Live Demo" },
+    { href: "/live-demo", label: "Live Demo" },
+    { href: "/blog", label: "Blog" },
     { href: "/pricing", label: "Pricing" },
     { href: "/solutions", label: "Solutions" },
   ],

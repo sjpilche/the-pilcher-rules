@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const data = demoSchema.parse(body);
 
     const apiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_EMAIL ?? "hello@thepilcherrules.com";
+    const toEmail = process.env.CONTACT_EMAIL ?? "hello@jakecfo.com";
 
     if (!apiKey || apiKey === "re_your_api_key_here") {
       console.log("[Demo Request]", data);
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "The Pilcher Rules <noreply@thepilcherrules.com>",
+        from: "Jake CFO <noreply@jakecfo.com>",
         to: [toEmail],
         reply_to: data.email,
         subject: `🎯 Demo Request: ${data.firstName} ${data.lastName} — ${data.company}`,
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Steve at The Pilcher Rules <hello@thepilcherrules.com>",
+        from: "Jake at jakecfo.com <hello@jakecfo.com>",
         to: [data.email],
         subject: "Got your demo request — talk soon.",
         html: `
@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
             </p>
             <p style="color:#374151;line-height:1.6;">
               In the meantime, explore what each agent does at
-              <a href="https://thepilcherrules.com/agents" style="color:#3b82f6;">thepilcherrules.com/agents</a>.
+              <a href="https://jakecfo.com/agents" style="color:#3b82f6;">jakecfo.com/agents</a>.
             </p>
             <p style="color:#374151;">— Steve</p>
           </div>

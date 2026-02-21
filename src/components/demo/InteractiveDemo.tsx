@@ -43,7 +43,7 @@ export function InteractiveDemo() {
           </div>
           <div className="flex-1 mx-4">
             <div className="bg-white/5 rounded-md px-3 py-1 text-xs text-slate-500 text-center">
-              app.thepilcherrules.com/dashboard
+              app.jakecfo.com/dashboard
             </div>
           </div>
           <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20">

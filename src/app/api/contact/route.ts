@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     const data = contactSchema.parse(body);
 
     const apiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_EMAIL ?? "hello@thepilcherrules.com";
+    const toEmail = process.env.CONTACT_EMAIL ?? "hello@jakecfo.com";
 
     if (!apiKey || apiKey === "re_your_api_key_here") {
       // Dev mode: just log and return success
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "The Pilcher Rules <noreply@thepilcherrules.com>",
+        from: "Jake CFO <noreply@jakecfo.com>",
         to: [toEmail],
         reply_to: data.email,
         subject: `Contact: ${data.name}`,

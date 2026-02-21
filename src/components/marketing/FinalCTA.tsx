@@ -18,19 +18,19 @@ export function FinalCTA() {
           viewport={{ once: true }}
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8">
-            Ready to see it in action?
+            Ready to meet Jake?
           </div>
 
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
-            Stop managing your books.
+            Your construction CFO.
             <br />
-            <span className="gradient-text">Start commanding them.</span>
+            <span className="gradient-text">Finally available 24/7.</span>
           </h2>
 
           <p className="text-slate-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-            Get a personalized demo with your actual financial data.
-            We&apos;ll show you exactly which agents will move the needle
-            for your business — in 30 minutes.
+            Let Jake walk through your financials live. 30 minutes, your real
+            data, and you&apos;ll see exactly what he would catch, fix, and
+            optimize starting day one.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -39,14 +39,14 @@ export function FinalCTA() {
               className="group flex items-center gap-2.5 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg transition-all duration-200 shadow-xl shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5"
             >
               <Calendar className="w-5 h-5" />
-              Schedule a Demo
+              Meet Jake
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link
-              href="/agents"
+              href="/live-demo"
               className="px-8 py-4 rounded-xl border border-white/15 text-slate-200 hover:text-white hover:border-white/30 font-semibold text-lg transition-all duration-200 hover:bg-white/5"
             >
-              Explore Agents First
+              See Jake Live First
             </Link>
           </div>
 

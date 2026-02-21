@@ -16,33 +16,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "The Pilcher Rules — AI-Powered CFO Suite for Construction",
-    template: "%s | The Pilcher Rules",
+    default: "Jake — Your Construction AI CFO",
+    template: "%s | Jake CFO",
   },
   description:
-    "12 specialized AI agents purpose-built for construction finance. AR collections, job costing, AIA billing, anomaly detection, and more — unified in one CFO intelligence platform.",
+    "Jake is your AI CFO built for construction. 12 specialized agents covering AR collections, job costing, AIA billing, anomaly detection, and more — one intelligent system that runs your financial operation.",
   keywords: [
-    "CFO AI",
+    "AI CFO construction",
     "construction finance AI",
     "accounts receivable automation",
-    "job costing software",
-    "AIA billing",
+    "job costing AI",
+    "AIA billing software",
     "anomaly detection finance",
-    "AI financial agents",
+    "Jake CFO",
+    "jakecfo.com",
   ],
   openGraph: {
-    title: "The Pilcher Rules — AI-Powered CFO Suite for Construction",
+    title: "Jake — Your Construction AI CFO",
     description:
-      "12 specialized AI agents purpose-built for construction finance.",
+      "12 specialized AI agents. One construction CFO that never sleeps.",
     type: "website",
     locale: "en_US",
+    url: "https://jakecfo.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Pilcher Rules — AI-Powered CFO Suite for Construction",
+    title: "Jake — Your Construction AI CFO",
     description:
-      "12 specialized AI agents purpose-built for construction finance.",
+      "12 specialized AI agents. One construction CFO that never sleeps.",
   },
+  metadataBase: new URL("https://jakecfo.com"),
 };
 
 export default function RootLayout({

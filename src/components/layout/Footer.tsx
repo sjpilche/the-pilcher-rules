@@ -32,14 +32,17 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" />
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center font-black text-white text-base">
+                J
               </div>
-              <span className="font-bold text-white text-lg">The Pilcher Rules</span>
+              <div className="flex flex-col leading-none">
+                <span className="font-black text-white text-lg">Jake</span>
+                <span className="text-slate-500 text-[10px] tracking-widest uppercase">Construction AI CFO</span>
+              </div>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-              12 specialized AI agents purpose-built for construction finance.
-              Not generic AI — surgical financial intelligence.
+              Jake is your AI CFO — 12 specialized capabilities purpose-built
+              for construction finance. Not generic AI. Your CFO.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
@@ -57,7 +60,7 @@ export function Footer() {
                 <Twitter className="w-4 h-4" />
               </a>
               <a
-                href="mailto:hello@thepilcherrules.com"
+                href="mailto:hello@jakecfo.com"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
                 aria-label="Email"
               >
@@ -88,10 +91,10 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} The Pilcher Rules. All rights reserved.
+            © {new Date().getFullYear()} Jake CFO · jakecfo.com · All rights reserved.
           </p>
           <p className="text-slate-600 text-xs">
-            Built for construction CFOs who refuse to accept the status quo.
+            The AI CFO construction teams actually deserve.
           </p>
         </div>
       </div>

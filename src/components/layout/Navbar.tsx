@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { href: "/agents", label: "Agents" },
+  { href: "/agents", label: "Capabilities" },
   { href: "/solutions", label: "Solutions" },
   { href: "/live-demo", label: "Live Demo" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Jake" },
 ];
 
 export function Navbar() {
@@ -37,12 +37,13 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
-            <Zap className="w-4 h-4 text-white" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/30 font-black text-white text-lg">
+            J
           </div>
-          <span className="font-bold text-white text-lg tracking-tight">
-            The Pilcher Rules
-          </span>
+          <div className="flex flex-col leading-none">
+            <span className="font-black text-white text-lg tracking-tight">Jake</span>
+            <span className="text-slate-500 text-[10px] font-medium tracking-widest uppercase">Construction AI CFO</span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
@@ -75,11 +76,11 @@ export function Navbar() {
             href="/demo"
             className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
           >
-            Request Demo →
+            Meet Jake →
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile toggle */}
         <button
           className="md:hidden p-2 text-slate-400 hover:text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -109,7 +110,7 @@ export function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center px-5 py-3 rounded-lg bg-blue-600 text-white text-sm font-semibold"
               >
-                Request Demo →
+                Meet Jake →
               </Link>
             </div>
           </div>

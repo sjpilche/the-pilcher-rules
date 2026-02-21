@@ -34,7 +34,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-white font-medium text-sm">Email</div>
-                  <div className="text-slate-400 text-sm">hello@thepilcherrules.com</div>
+                  <div className="text-slate-400 text-sm">hello@jakecfo.com</div>
                 </div>
               </div>
               <div className="flex items-center gap-4 text-slate-300">

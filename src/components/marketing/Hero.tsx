@@ -5,14 +5,14 @@ import Link from "next/link";
 import { ArrowRight, Zap, Shield, TrendingUp } from "lucide-react";
 
 const STATS = [
-  { value: "12", label: "AI Agents" },
+  { value: "12", label: "Jake's Capabilities" },
   { value: "100+", label: "Financial Metrics" },
   { value: "48", label: "Anomaly Rules" },
   { value: "85.3%", label: "ML Accuracy" },
 ];
 
 const PILLS = [
-  { icon: Zap, label: "Real-time Intelligence" },
+  { icon: Zap, label: "Always On, Never Sleeps" },
   { icon: Shield, label: "Construction-Native" },
   { icon: TrendingUp, label: "CFO-Grade Precision" },
 ];
@@ -34,7 +34,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-          Purpose-built for construction finance teams
+          The AI CFO built for construction
         </motion.div>
 
         {/* Headline */}
@@ -44,12 +44,12 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-black tracking-tight text-white mb-6 leading-[1.05]"
         >
-          Your CFO.{" "}
-          <span className="gradient-text">Upgraded.</span>
+          Meet{" "}
+          <span className="gradient-text">Jake.</span>
           <br />
-          <span className="text-4xl md:text-6xl font-bold text-slate-300">
-            12 AI agents that know
-            <br className="hidden md:block" /> construction finance.
+          <span className="text-4xl md:text-5xl font-bold text-slate-300">
+            Your construction CFO,
+            <br className="hidden md:block" /> powered by AI.
           </span>
         </motion.h1>
 
@@ -60,9 +60,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          From AR collections to AIA billing, job costing to anomaly detection —
-          one unified AI suite that runs your financial operations while you focus
-          on growing the business.
+          Jake runs 12 specialized AI capabilities covering every corner of
+          construction finance — AR collections, job costing, AIA billing,
+          anomaly detection, and more. He works 24/7 and never misses a deadline.
         </motion.p>
 
         {/* Pills */}
@@ -91,17 +91,17 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
         >
           <Link
-            href="/demo"
+            href="/live-demo"
             className="group flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg transition-all duration-200 shadow-xl shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5"
           >
-            See It Live
+            See Jake in Action
             <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
           <Link
             href="/agents"
             className="flex items-center gap-2 px-8 py-4 rounded-xl border border-white/15 text-slate-200 hover:text-white hover:border-white/30 font-semibold text-lg transition-all duration-200 hover:bg-white/5"
           >
-            Explore All Agents
+            What Jake Can Do
           </Link>
         </motion.div>
 

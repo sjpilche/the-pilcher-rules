@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Jake",
   description:
-    "The story behind The Pilcher Rules — built by a CFO who refused to accept the status quo in construction finance.",
+    "The story behind Jake — the AI CFO built for construction finance. Why we built him, and the rules he runs by.",
 };
 
 const PRINCIPLES = [
@@ -30,7 +30,7 @@ const PRINCIPLES = [
   {
     number: "04",
     title: "Ruthless about ROI.",
-    body: "Every agent has a measurable impact. We track it. We show it. If an agent isn't paying for itself within 90 days, we fix it. That's The Pilcher Rules guarantee.",
+    body: "Every one of Jake's capabilities has a measurable impact. We track it. We show it. If Jake isn't paying for himself within 90 days, we fix it. That's our guarantee.",
     color: "#f59e0b",
   },
 ];
@@ -42,12 +42,12 @@ export default function AboutPage() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
-            Our Story
+            Meet Jake
           </div>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
-            Built by a CFO who
+            The CFO your construction
             <br />
-            <span className="gradient-text">refused the status quo.</span>
+            <span className="gradient-text">company always needed.</span>
           </h1>
           <div className="space-y-5 text-slate-300 text-lg leading-relaxed">
             <p>
@@ -58,16 +58,18 @@ export default function AboutPage() {
               systems built for manufacturers. Spreadsheets. More spreadsheets.
             </p>
             <p>
-              The Pilcher Rules started as a set of operating principles — the
-              non-negotiable rules of construction finance that no one else was
-              enforcing. Every dollar tracked. Every deadline honored. Every
-              anomaly caught before it became a crisis. Every job margin
-              visible in real time.
+              Jake was built to change that. He&apos;s not a dashboard. He&apos;s
+              not a report. He&apos;s an AI CFO — one who knows the difference
+              between retainage and retention, understands AIA G702 billing,
+              tracks lien deadlines by state, and classifies job costs with
+              85.3% ML accuracy. He works 24/7 and never misses a deadline.
             </p>
             <p>
-              We built AI agents to enforce those rules automatically. 12 of
-              them. Each a specialist. All coordinated. So you stop fighting
-              fires and start running your business.
+              Under the hood, Jake runs 12 specialized AI agents — each a
+              domain expert, all coordinated through a central governance layer.
+              Together they cover every dollar that flows through your
+              construction business, surface what matters, and act before
+              problems become crises.
             </p>
           </div>
         </div>
@@ -109,11 +111,11 @@ export default function AboutPage() {
           style={{ background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.2)" }}
         >
           <h3 className="text-white font-bold text-2xl mb-3">
-            Ready to run by The Pilcher Rules?
+            Ready to put Jake to work?
           </h3>
           <p className="text-slate-400 text-sm mb-6 max-w-md mx-auto">
-            30 minutes. Your data. We&apos;ll show you what your financial
-            operation should actually look like.
+            30 minutes. Your data. See exactly what Jake would flag,
+            fix, and optimize in your construction financials — starting today.
           </p>
           <Link
             href="/demo"

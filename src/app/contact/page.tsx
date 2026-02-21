@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Clock } from "lucide-react";
+import { ContactForm } from "@/components/marketing/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -58,56 +59,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right: form */}
-          <div className="glass rounded-2xl p-8">
-            <h2 className="text-white font-bold text-xl mb-6">Send a message</h2>
-            <form className="space-y-5" action="/api/contact" method="POST">
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  Your name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-                  placeholder="Steve Pilcher"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-                  placeholder="you@company.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  What&apos;s on your mind?
-                </label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm resize-none"
-                  placeholder="Tell us what's going on with your financial ops..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-600/25"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import { DemoForm } from "@/components/marketing/DemoForm";
 
 export const metadata: Metadata = {
   title: "Request a Demo",
@@ -59,107 +60,7 @@ export default function DemoPage() {
           </div>
 
           {/* Right: form */}
-          <div className="glass rounded-2xl p-8">
-            <h2 className="text-white font-bold text-xl mb-6">
-              Schedule your demo
-            </h2>
-            <form className="space-y-5" action="/api/contact" method="POST">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                    First name
-                  </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:bg-white/8 transition-all text-sm"
-                    placeholder="Steve"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-                    placeholder="Pilcher"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  Work email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-                  placeholder="cfo@yourcompany.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  Company name
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-                  placeholder="Your construction company"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  Annual revenue (approx)
-                </label>
-                <select
-                  name="revenue"
-                  className="w-full px-4 py-3 rounded-xl bg-[#0d1424] border border-white/10 text-slate-300 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-                >
-                  <option value="">Select range</option>
-                  <option>Under $10M</option>
-                  <option>$10M – $50M</option>
-                  <option>$50M – $200M</option>
-                  <option>$200M – $500M</option>
-                  <option>Over $500M</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-1.5">
-                  What&apos;s your biggest financial pain right now?
-                </label>
-                <textarea
-                  name="painPoint"
-                  rows={3}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm resize-none"
-                  placeholder="AR aging, month-end close, job cost visibility..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-600/25"
-              >
-                <Calendar className="w-4 h-4" />
-                Request My Demo
-                <ArrowRight className="w-4 h-4" />
-              </button>
-
-              <p className="text-slate-600 text-xs text-center">
-                We&apos;ll reach out within 1 business day to schedule.
-              </p>
-            </form>
-          </div>
+          <DemoForm />
         </div>
       </div>
     </div>

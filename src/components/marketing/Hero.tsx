@@ -5,16 +5,16 @@ import Link from "next/link";
 import { ArrowRight, Zap, Shield, TrendingUp } from "lucide-react";
 
 const STATS = [
-  { value: "12", label: "Jake's Capabilities" },
-  { value: "100+", label: "Financial Metrics" },
-  { value: "48", label: "Anomaly Rules" },
-  { value: "85.3%", label: "ML Accuracy" },
+  { value: "12", label: "Specialized Agents" },
+  { value: "100+", label: "KPIs Monitored Daily" },
+  { value: "48", label: "Anomaly Detection Rules" },
+  { value: "85.3%", label: "Job Cost ML Accuracy" },
 ];
 
 const PILLS = [
   { icon: Zap, label: "Always On, Never Sleeps" },
   { icon: Shield, label: "Construction-Native" },
-  { icon: TrendingUp, label: "CFO-Grade Precision" },
+  { icon: TrendingUp, label: "Takes Action, Not Just Reports" },
 ];
 
 export function Hero() {
@@ -44,12 +44,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-black tracking-tight text-white mb-6 leading-[1.05]"
         >
-          Meet{" "}
-          <span className="gradient-text">Jake.</span>
+          <span className="gradient-text">Jake</span> runs your
           <br />
           <span className="text-4xl md:text-5xl font-bold text-slate-300">
-            Your construction CFO,
-            <br className="hidden md:block" /> powered by AI.
+            construction finance while
+            <br className="hidden md:block" /> you run the business.
           </span>
         </motion.h1>
 
@@ -60,9 +59,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Jake runs 12 specialized AI capabilities covering every corner of
-          construction finance — AR collections, job costing, AIA billing,
-          anomaly detection, and more. He works 24/7 and never misses a deadline.
+          Collections follow-ups sent. Job margins monitored. Close cycle cut in half.
+          Jake handles the financial operations your team is currently doing manually
+          — so they don&apos;t have to.
         </motion.p>
 
         {/* Pills */}
@@ -101,7 +100,7 @@ export function Hero() {
             href="/agents"
             className="flex items-center gap-2 px-8 py-4 rounded-xl border border-white/15 text-slate-200 hover:text-white hover:border-white/30 font-semibold text-lg transition-all duration-200 hover:bg-white/5"
           >
-            What Jake Can Do
+            See All 12 Capabilities
           </Link>
         </motion.div>
 

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { db, isDbConfigured } from "@/lib/db";
 
 const demoSchema = z.object({
   firstName: z.string().min(1).max(50),
@@ -15,15 +16,46 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const data = demoSchema.parse(body);
 
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+      req.headers.get("x-real-ip") ??
+      null;
+
+    // 1. Persist to database (source of truth — do this first)
+    if (isDbConfigured()) {
+      try {
+        await db.query(
+          `INSERT INTO demo_requests
+             (first_name, last_name, email, company, revenue, pain_point, ip_address)
+           VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+          [
+            data.firstName,
+            data.lastName,
+            data.email,
+            data.company,
+            data.revenue ?? null,
+            data.painPoint ?? null,
+            ip,
+          ]
+        );
+      } catch (dbErr) {
+        // Log but don't block — still try to send the email
+        console.error("[Demo Request] DB write failed:", dbErr);
+      }
+    }
+
+    // 2. Send email notification
     const apiKey = process.env.RESEND_API_KEY;
     const toEmail = process.env.CONTACT_EMAIL ?? "hello@jakecfo.com";
+    const toEmails = [toEmail, "steve.j.pilcher@gmail.com"];
 
     if (!apiKey || apiKey === "re_your_api_key_here") {
-      console.log("[Demo Request]", data);
+      console.log("[Demo Request - dev mode]", data);
       return NextResponse.json({ success: true, dev: true });
     }
 
-    const res = await fetch("https://api.resend.com/emails", {
+    // Admin notification
+    const adminRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -31,13 +63,13 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: "Jake CFO <noreply@jakecfo.com>",
-        to: [toEmail],
+        to: toEmails,
         reply_to: data.email,
         subject: `🎯 Demo Request: ${data.firstName} ${data.lastName} — ${data.company}`,
         html: `
           <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#f8fafc;padding:24px;border-radius:12px;">
             <h2 style="color:#1e3a5f;margin-bottom:4px;">New Demo Request</h2>
-            <p style="color:#64748b;margin-top:0;">Someone wants to see The Pilcher Rules in action.</p>
+            <p style="color:#64748b;margin-top:0;">Someone wants to see Jake in action.</p>
             <hr style="border:none;border-top:1px solid #e2e8f0;margin:20px 0;"/>
             <table style="width:100%;border-collapse:collapse;">
               <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Name</td><td style="padding:8px 0;font-weight:600;color:#1e293b;">${data.firstName} ${data.lastName}</td></tr>
@@ -57,13 +89,14 @@ export async function POST(req: NextRequest) {
       }),
     });
 
-    if (!res.ok) {
-      const err = await res.text();
-      console.error("Resend error:", err);
-      return NextResponse.json({ error: "Failed to send" }, { status: 500 });
+    if (!adminRes.ok) {
+      const err = await adminRes.text();
+      console.error("[Demo Request] Resend admin email error:", err);
+      // Lead is already saved — return success
+      return NextResponse.json({ success: true });
     }
 
-    // Send confirmation to the requester
+    // Confirmation to requester
     await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -94,9 +127,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (err) {
     if (err instanceof z.ZodError) {
-      return NextResponse.json({ error: err.issues[0]?.message ?? "Invalid input" }, { status: 400 });
+      return NextResponse.json(
+        { error: err.issues[0]?.message ?? "Invalid input" },
+        { status: 400 }
+      );
     }
-    console.error("Demo request route error:", err);
+    console.error("[Demo Request] Route error:", err);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

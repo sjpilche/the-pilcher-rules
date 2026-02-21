@@ -22,9 +22,9 @@ export function FinalCTA() {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
-            Your construction CFO.
+            Stop chasing
             <br />
-            <span className="gradient-text">Finally available 24/7.</span>
+            <span className="gradient-text">your own financials.</span>
           </h2>
 
           <p className="text-slate-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
@@ -39,7 +39,7 @@ export function FinalCTA() {
               className="group flex items-center gap-2.5 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg transition-all duration-200 shadow-xl shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5"
             >
               <Calendar className="w-5 h-5" />
-              Meet Jake
+              See What Jake Would Flag in Your Business
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link

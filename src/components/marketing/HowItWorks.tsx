@@ -25,11 +25,11 @@ const STEPS = [
   {
     number: "03",
     icon: BarChart3,
-    title: "Insight & Action",
+    title: "Alerts, Explanations, and Next Steps",
     description:
-      "Your CFO dashboard surfaces what matters: cash position, collections risk, job margin alerts, compliance flags — with AI-narrated summaries and one-click actions.",
+      "Jake flags what needs attention and tells you why — cash exposure, overdue collections, margin slippage — before it becomes a problem. No dashboard-diving required.",
     color: "#10b981",
-    details: ["Executive dashboards", "AI-narrated summaries", "Actionable alerts", "Board-ready reports"],
+    details: ["Plain-English explanations", "Priority-ranked alerts", "Suggested next actions", "Escalation when it matters"],
   },
 ];
 

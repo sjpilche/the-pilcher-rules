@@ -77,7 +77,7 @@ export function Navbar() {
             href="/demo"
             className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
           >
-            Meet Jake →
+            Get a Demo →
           </Link>
         </div>
 
@@ -111,7 +111,7 @@ export function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center px-5 py-3 rounded-lg bg-blue-600 text-white text-sm font-semibold"
               >
-                Meet Jake →
+                Get a Demo →
               </Link>
             </div>
           </div>

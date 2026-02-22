@@ -38,7 +38,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/30 font-black text-white text-lg">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30 font-black text-black text-lg">
             J
           </div>
           <div className="flex flex-col leading-none">
@@ -75,7 +75,7 @@ export function Navbar() {
           </Link>
           <Link
             href="/demo"
-            className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
+            className="px-5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-black text-sm font-bold transition-all duration-200 shadow-lg shadow-amber-500/25 hover:shadow-amber-400/40"
           >
             Get a Demo →
           </Link>
@@ -109,7 +109,7 @@ export function Navbar() {
               <Link
                 href="/demo"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center px-5 py-3 rounded-lg bg-blue-600 text-white text-sm font-semibold"
+                className="block w-full text-center px-5 py-3 rounded-lg bg-amber-500 text-black text-sm font-bold"
               >
                 Get a Demo →
               </Link>

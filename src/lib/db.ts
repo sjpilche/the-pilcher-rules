@@ -20,10 +20,20 @@ function createPool(): Pool {
   });
 }
 
-export const db: Pool =
-  process.env.NODE_ENV === "production"
-    ? createPool()
-    : (globalThis._pgPool ?? (globalThis._pgPool = createPool()));
+function getPool(): Pool {
+  if (process.env.NODE_ENV === "production") {
+    return createPool();
+  }
+  return globalThis._pgPool ?? (globalThis._pgPool = createPool());
+}
+
+// Lazy proxy — pool is only created on first query, not at module load time.
+// This prevents build failures when POSTGRES_URL is not set in the build env.
+export const db = new Proxy({} as Pool, {
+  get(_target, prop) {
+    return (getPool() as unknown as Record<string | symbol, unknown>)[prop];
+  },
+});
 
 /**
  * Returns true if the DB is configured (POSTGRES_URL is set).

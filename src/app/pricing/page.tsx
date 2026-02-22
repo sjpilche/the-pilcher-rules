@@ -4,7 +4,28 @@ import { CheckCircle2, ArrowRight, Lock, FlaskConical } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Pricing — Jake CFO",
-  description: "30-day free trial. No credit card. Lock your price for life as a founding member.",
+  description:
+    "30-day free trial, no credit card required. Join as a founding member and lock your price for life. AI CFO software built for construction companies.",
+  keywords: [
+    "construction CFO software pricing",
+    "AI CFO free trial",
+    "construction finance software",
+    "Jake CFO pricing",
+    "construction AI pricing",
+  ],
+  openGraph: {
+    title: "30-Day Free Trial — Jake CFO",
+    description:
+      "Join as a founding member. Try Jake free for 30 days, no credit card. Lock your price for life.",
+    url: "https://jakecfo.com/pricing",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "30-Day Free Trial — Jake CFO",
+    description:
+      "Join as a founding member. Try Jake free for 30 days, no credit card. Lock your price for life.",
+  },
 };
 
 const TIERS = [

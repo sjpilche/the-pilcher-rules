@@ -7,9 +7,43 @@ import { WhoItsFor } from "@/components/marketing/WhoItsFor";
 import { SocialProof } from "@/components/marketing/SocialProof";
 import { FinalCTA } from "@/components/marketing/FinalCTA";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Jake CFO",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://jakecfo.com",
+  description:
+    "AI CFO built for construction companies. 12 specialized agents covering AR collections, job costing, AIA billing, anomaly detection, cash flow forecasting, and more.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    description: "30-day free trial, no credit card required",
+  },
+  provider: {
+    "@type": "Organization",
+    name: "Jake CFO",
+    url: "https://jakecfo.com",
+  },
+  featureList: [
+    "AR Collections Automation",
+    "Job Costing AI",
+    "AIA Billing",
+    "Cash Flow Forecasting",
+    "Anomaly Detection",
+    "Board-Ready Reporting",
+  ],
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
 
       {/* Agent showcase */}

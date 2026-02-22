@@ -50,7 +50,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
               What Jake Covers
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <a
               href="/agents"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/15 text-slate-300 hover:text-white hover:border-white/30 font-medium transition-all hover:bg-white/5"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-amber-500/20 text-slate-300 hover:text-white hover:border-amber-500/40 font-medium transition-all hover:bg-amber-500/5"
             >
               View all 12 agents →
             </a>
@@ -76,10 +76,15 @@ export default function HomePage() {
       </section>
 
       <WhatJakeDoesDaily />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
       <HowItWorks />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
       <HowFastItStarts />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
       <WhoItsFor />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
       <SocialProof />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
       <FinalCTA />
     </>
   );

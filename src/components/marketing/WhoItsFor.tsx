@@ -22,7 +22,7 @@ const NOT_FIT = [
 
 export function WhoItsFor() {
   return (
-    <section className="py-32 relative overflow-hidden border-t border-white/5">
+    <section className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
@@ -106,7 +106,7 @@ export function WhoItsFor() {
           </p>
           <Link
             href="/demo"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-600/25"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold transition-all hover:-translate-y-0.5 shadow-lg shadow-amber-500/25"
           >
             Schedule a 30-Minute Demo
             <ArrowRight className="w-4 h-4" />

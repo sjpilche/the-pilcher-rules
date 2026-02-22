@@ -29,7 +29,7 @@ const STEPS = [
 
 export function HowFastItStarts() {
   return (
-    <section className="py-32 relative overflow-hidden border-t border-white/5">
+    <section className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div

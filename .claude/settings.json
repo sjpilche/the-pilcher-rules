@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.cfojake.com)",
+      "Bash(cat:*)",
+      "Bash(\"/c/code/the-pilcher-rules/src/content/blog/retainage-cash-flow-construction.md\":*)"
+    ]
+  }
+}

@@ -1,3 +1,5 @@
+export type CompanyType = "GC" | "Subcontractor" | "Multi-Entity" | "PE-Backed" | "All";
+
 export interface Agent {
   slug: string;
   name: string;
@@ -9,6 +11,7 @@ export interface Agent {
   glowColor: string;
   icon: string;
   category: AgentCategory;
+  companyTypes: CompanyType[];
   capabilities: string[];
   metrics: { label: string; value: string }[];
   status: "production" | "beta" | "coming-soon";
@@ -35,6 +38,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(239,68,68,0.15)",
     icon: "📥",
     category: "Collections",
+    companyTypes: ["Subcontractor", "GC", "Multi-Entity"],
     capabilities: [
       "Invoice aging analysis with risk scoring",
       "AI-generated dunning sequences",
@@ -62,6 +66,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(245,158,11,0.15)",
     icon: "⚙️",
     category: "Payments",
+    companyTypes: ["Multi-Entity", "PE-Backed", "GC"],
     capabilities: [
       "Automated invoice intake (email, PDF, EDI)",
       "7-step P2P pipeline automation",
@@ -89,6 +94,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(249,115,22,0.15)",
     icon: "🔍",
     category: "Payments",
+    companyTypes: ["Subcontractor", "GC", "Multi-Entity", "PE-Backed"],
     capabilities: [
       "Multi-format invoice OCR extraction",
       "LLM-powered field validation",
@@ -116,6 +122,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(139,92,246,0.15)",
     icon: "🏗️",
     category: "Analytics",
+    companyTypes: ["GC", "Subcontractor"],
     capabilities: [
       "ML cost code classification (85.3% accuracy)",
       "Real-time WIP reporting",
@@ -143,6 +150,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(236,72,153,0.15)",
     icon: "🚨",
     category: "Intelligence",
+    companyTypes: ["All"],
     capabilities: [
       "48 configurable detection rules",
       "Composite risk score per transaction",
@@ -170,6 +178,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(59,130,246,0.15)",
     icon: "📊",
     category: "Analytics",
+    companyTypes: ["Multi-Entity", "GC"],
     capabilities: [
       "100+ financial KPI metrics",
       "Cash flow forecasting (13-week)",
@@ -197,6 +206,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(99,102,241,0.15)",
     icon: "🧠",
     category: "Intelligence",
+    companyTypes: ["Multi-Entity", "PE-Backed"],
     capabilities: [
       "Multi-agent orchestration (FSM-based)",
       "Policy rule engine",
@@ -224,6 +234,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(16,185,129,0.15)",
     icon: "📋",
     category: "Compliance",
+    companyTypes: ["GC"],
     capabilities: [
       "G702/G703 pay application generation",
       "Schedule of values management",
@@ -251,6 +262,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(20,184,166,0.15)",
     icon: "🤝",
     category: "Compliance",
+    companyTypes: ["GC"],
     capabilities: [
       "Subcontractor payment processing",
       "Compliance verification (license, insurance)",
@@ -278,6 +290,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(245,158,11,0.15)",
     icon: "🏦",
     category: "Operations",
+    companyTypes: ["All"],
     capabilities: [
       "Automated bank reconciliation",
       "Deposit ingestion and matching",
@@ -305,6 +318,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(220,38,38,0.15)",
     icon: "⚠️",
     category: "Compliance",
+    companyTypes: ["GC", "Subcontractor"],
     capabilities: [
       "Lien deadline tracking by state",
       "Preliminary notice generation",
@@ -332,6 +346,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(14,165,233,0.15)",
     icon: "✅",
     category: "Operations",
+    companyTypes: ["Multi-Entity", "PE-Backed"],
     capabilities: [
       "Trial balance review and variance analysis",
       "Automated account reconciliation",
@@ -359,6 +374,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(6,182,212,0.15)",
     icon: "🔗",
     category: "Operations",
+    companyTypes: ["All"],
     capabilities: [
       "GL ↔ AR 2-way matching",
       "GL ↔ AP 2-way matching",
@@ -386,6 +402,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(124,58,237,0.15)",
     icon: "🔌",
     category: "Operations",
+    companyTypes: ["Multi-Entity", "PE-Backed"],
     capabilities: [
       "Business Central live connector",
       "SQL Server data sync",
@@ -413,6 +430,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(22,163,74,0.15)",
     icon: "🛡️",
     category: "Intelligence",
+    companyTypes: ["PE-Backed", "Multi-Entity"],
     capabilities: [
       "Cash balance control totals",
       "GL row count and balance checks",
@@ -440,6 +458,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(168,85,247,0.15)",
     icon: "💬",
     category: "Intelligence",
+    companyTypes: ["All"],
     capabilities: [
       "Natural language financial queries",
       "Real-time SSE streaming responses",
@@ -467,6 +486,7 @@ export const AGENTS: Agent[] = [
     glowColor: "rgba(225,29,72,0.15)",
     icon: "🔒",
     category: "Compliance",
+    companyTypes: ["PE-Backed"],
     capabilities: [
       "15 continuous SQL-based control rules",
       "Scheduled and on-demand control runs",
@@ -491,6 +511,13 @@ export const CATEGORIES: AgentCategory[] = [
   "Compliance",
   "Operations",
   "Intelligence",
+];
+
+export const COMPANY_TYPES: CompanyType[] = [
+  "GC",
+  "Subcontractor",
+  "Multi-Entity",
+  "PE-Backed",
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

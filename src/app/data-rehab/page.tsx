@@ -117,6 +117,53 @@ const REHAB_STEPS = [
   },
 ];
 
+const CASE_STUDY = {
+  company: "Regional GC, $180M annual revenue",
+  challenge: "AR aging report showed $2.1M outstanding, but GL only reconciled to $1.8M. Finance team spent 3 days every month investigating the $300k gap. No confidence in which jobs were profitable.",
+  rehab: "Data Rehab took 6 weeks. We normalized 4 years of BC data, deduped 340 duplicate customers, closed 47 unmatched invoices, and fixed job cost GL mappings.",
+  cost: "$52,000",
+  timeline: "6 weeks",
+  outcome: "AR now reconciles perfectly to GL. Collections team uses the clean data to reduce DSO by 4.2 days. Finance month-end close dropped from 10 days to 5 days.",
+};
+
+const FAQ_ITEMS = [
+  {
+    question: "What data do I need to provide for the diagnostic?",
+    answer:
+      "Typically: one export from your ERP (GL postings, AR invoices, AP bills, customers, vendors — all recent periods). We guide you through exactly what to export (usually 20 min of IT time). No private keys, no passwords, no sensitive employee data needed.",
+  },
+  {
+    question: "How long does the diagnostic really take?",
+    answer:
+      "5 business days is standard. We process your data, run 48 anomaly detection rules, validate GL reconciliation, and write a plain-English report. Rush diagnostics (2 days) available for an additional fee.",
+  },
+  {
+    question: "Can I see a sample diagnostic report?",
+    answer:
+      "We'll send you a redacted sample during the initial call. Shows structure, problem categories, severity ratings, and recommendations — so you know exactly what you're getting.",
+  },
+  {
+    question: "What if the diagnostic says my data is too messy to fix?",
+    answer:
+      "It won't. We've never encountered data so broken that it can't be rehabilitated. The diagnostic will tell you exactly what needs fixing and what it costs. You then decide whether to proceed with rehab.",
+  },
+  {
+    question: "After Data Rehab, do I have to use Jake's agents?",
+    answer:
+      "No. You own the cleaned database completely — the schema, the data, the quality documentation. You can use it with any BI tool, reporting system, or AI platform you choose. The 1-week trial shows you what Jake's agents can do with it, but you're never locked in.",
+  },
+  {
+    question: "How much does Data Rehab typically cost?",
+    answer:
+      "Depends on complexity. Small clean-ups (1–2 systems, minimal deduplication): $25k–$35k, 3–4 weeks. Larger engagements (3+ systems, heavy deduplication, multi-entity reconciliation): $50k–$75k, 5–8 weeks. The diagnostic scopes the exact price.",
+  },
+  {
+    question: "Can I run agents while rehab is happening?",
+    answer:
+      "No. Rehab happens on a copy of your data in isolation. We don't touch your live ERP. Once rehab is done and quality gates pass, we hand you the clean database and run the 1-week trial from there.",
+  },
+];
+
 export default function DataRehabPage() {
   return (
     <div className="min-h-screen pt-28 pb-24">
@@ -259,6 +306,72 @@ export default function DataRehabPage() {
               </p>
             </div>
           </div>
+
+          {/* Cost & Timeline */}
+          <div className="mt-8 glass rounded-xl p-6 border border-amber-500/20 bg-amber-500/5">
+            <h3 className="text-white font-bold text-lg mb-4">Typical Costs & Timeline</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-3">Small Engagements</p>
+                <p className="text-2xl font-black text-amber-400 mb-1">$25k–$35k</p>
+                <p className="text-slate-400 text-sm">3–4 weeks | Single ERP, minimal deduplication</p>
+              </div>
+              <div>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-3">Larger Engagements</p>
+                <p className="text-2xl font-black text-amber-400 mb-1">$50k–$75k</p>
+                <p className="text-slate-400 text-sm">5–8 weeks | Multi-system, heavy reconciliation</p>
+              </div>
+            </div>
+            <p className="text-slate-400 text-xs mt-5 pt-5 border-t border-amber-500/20">
+              <span className="text-amber-400 font-semibold">Note:</span> These are typical ranges. The diagnostic refines the exact scope, timeline, and price for your data.
+            </p>
+          </div>
+        </div>
+
+        {/* Case Study */}
+        <div className="glass rounded-2xl p-10 mb-8 border border-green-500/20 bg-green-500/5">
+          <div className="text-center mb-8">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium mb-4">
+              Real Example
+            </div>
+            <h3 className="text-white font-black text-2xl mb-2">
+              $300k Reconciliation Gap → Zero Gap
+            </h3>
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto">
+              Here&apos;s what Data Rehab actually delivered for a regional GC:
+            </p>
+          </div>
+          <div className="space-y-6">
+            <div>
+              <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-2">Challenge</p>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                {CASE_STUDY.challenge}
+              </p>
+            </div>
+            <div>
+              <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-2">What We Did</p>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                {CASE_STUDY.rehab}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-green-500/20">
+              <div>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-2">Cost</p>
+                <p className="text-2xl font-black text-green-400">{CASE_STUDY.cost}</p>
+              </div>
+              <div>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-2">Timeline</p>
+                <p className="text-2xl font-black text-green-400">{CASE_STUDY.timeline}</p>
+              </div>
+              <div>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-2">Outcome</p>
+                <p className="text-slate-300 text-sm">{CASE_STUDY.outcome}</p>
+              </div>
+            </div>
+            <p className="text-slate-500 text-xs pt-4 border-t border-green-500/20">
+              This company would have spent $300k+ in bad decisions based on misaligned data. The rehab investment paid for itself in the first month.
+            </p>
+          </div>
         </div>
 
         {/* What comes next */}
@@ -293,6 +406,31 @@ export default function DataRehabPage() {
                 <p className="text-white font-semibold text-sm mb-1">{item.title}</p>
                 <p className="text-slate-400 text-xs leading-relaxed">{item.body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-16">
+          <div className="text-center mb-10">
+            <h2 className="text-white font-black text-2xl mb-2">
+              Questions about Data Rehab?
+            </h2>
+            <p className="text-slate-400 text-sm max-w-xl mx-auto">
+              Here&apos;s what construction CFOs usually ask.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {FAQ_ITEMS.map((item, i) => (
+              <details key={i} className="group glass rounded-xl p-6 border border-white/5 hover:border-white/10 transition-colors cursor-pointer">
+                <summary className="flex items-start gap-3 font-semibold text-white select-none">
+                  <span className="text-amber-400 text-lg leading-none mt-0.5 group-open:rotate-90 transition-transform">▶</span>
+                  {item.question}
+                </summary>
+                <p className="text-slate-400 text-sm leading-relaxed mt-4 ml-8">
+                  {item.answer}
+                </p>
+              </details>
             ))}
           </div>
         </div>

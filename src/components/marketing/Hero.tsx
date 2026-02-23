@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, HardHat, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowRight, HardHat, ShieldCheck, TrendingUp, Database } from "lucide-react";
 
 const STATS = [
-  { value: "12", label: "Specialized Agents" },
+  { value: "17", label: "Specialized Agents" },
   { value: "100+", label: "KPIs Monitored Daily" },
   { value: "48", label: "Anomaly Detection Rules" },
   { value: "85.3%", label: "Job Cost ML Accuracy" },
@@ -13,6 +13,7 @@ const STATS = [
 
 const PILLS = [
   { icon: HardHat, label: "Built for Construction" },
+  { icon: Database, label: "Data Rehab First" },
   { icon: ShieldCheck, label: "Surety & Lender Ready" },
   { icon: TrendingUp, label: "Takes Action, Not Just Reports" },
 ];
@@ -113,7 +114,7 @@ export function Hero() {
             href="/agents"
             className="flex items-center gap-2 px-8 py-4 rounded-xl border border-amber-500/20 text-slate-200 hover:text-white hover:border-amber-500/40 font-semibold text-lg transition-all duration-200 hover:bg-amber-500/5"
           >
-            See All 12 Capabilities
+            See All 17 Agents
           </Link>
         </motion.div>
 

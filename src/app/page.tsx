@@ -15,7 +15,7 @@ const jsonLd = {
   operatingSystem: "Web",
   url: "https://jakecfo.com",
   description:
-    "AI CFO built for construction companies. 12 specialized agents covering AR collections, job costing, AIA billing, anomaly detection, cash flow forecasting, and more.",
+    "AI CFO built for construction companies. 17 specialized agents covering AR collections, job costing, AIA billing, anomaly detection, cash flow forecasting, ERP integration, financial controls, and more.",
   offers: {
     "@type": "Offer",
     price: "0",
@@ -33,6 +33,11 @@ const jsonLd = {
     "AIA Billing",
     "Cash Flow Forecasting",
     "Anomaly Detection",
+    "ERP Integration (Business Central + SQL Server)",
+    "Financial Controls Monitoring (15 rules, SOC 2)",
+    "Data Trust Platform Integrity",
+    "Reconciliation Engine (GL ↔ AR ↔ AP)",
+    "Conversational AI Chat Engine",
     "Board-Ready Reporting",
   ],
 };
@@ -69,7 +74,7 @@ export default function HomePage() {
               href="/agents"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-amber-500/20 text-slate-300 hover:text-white hover:border-amber-500/40 font-medium transition-all hover:bg-amber-500/5"
             >
-              View all 12 agents →
+              View all 17 agents →
             </a>
           </div>
         </div>

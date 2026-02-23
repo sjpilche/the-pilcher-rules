@@ -48,7 +48,7 @@ export default function LiveDemoPage() {
               href="/agents"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/15 text-slate-200 hover:text-white hover:border-white/30 font-semibold transition-all hover:bg-white/5"
             >
-              Explore All 12 Agents
+              Explore All 17 Agents
             </Link>
           </div>
         </div>

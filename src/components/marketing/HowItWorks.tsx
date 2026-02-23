@@ -1,35 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Database, Cpu, BarChart3 } from "lucide-react";
+import { Stethoscope, Wrench, FlaskConical, Building2 } from "lucide-react";
 
-const STEPS = [
+const STAGES = [
   {
     number: "01",
-    icon: Database,
-    title: "Connect Your Data",
+    icon: Stethoscope,
+    title: "Free AI Readiness Diagnostic",
     description:
-      "Point the suite at your existing ERP, accounting system, or bank feeds. We map your data schema in hours, not weeks. No rip-and-replace.",
+      "We analyze your ERP and financial data and deliver an honest report: data quality score, reconciliation gaps, duplication problems, sync latency. You see exactly what's broken — before spending a dollar.",
     color: "#3b82f6",
-    details: ["Azure PostgreSQL native", "REST API connectors", "CSV/Excel imports", "Real-time sync"],
+    details: ["Data quality score (0–100)", "GL & AR integrity check", "Vendor/customer duplication scan", "AI Readiness Score report"],
+    label: "Free",
   },
   {
     number: "02",
-    icon: Cpu,
-    title: "Agents Get to Work",
+    icon: Wrench,
+    title: "Data Rehab",
     description:
-      "12 specialized agents analyze your data continuously. ML models classify, anomaly engines scan, and the CFO Manager coordinates it all through a governance layer.",
-    color: "#8b5cf6",
-    details: ["48 anomaly rules active", "ML cost classification", "Policy enforcement", "Real-time processing"],
+      "We normalize your ERP, close the gaps, clean the duplicates, and patch the reconciliation issues. You get a certified, AI-ready data layer. We invoice on delivery — not kickoff.",
+    color: "#f59e0b",
+    details: ["ERP normalization (BC, SQL Server)", "Reconciliation gap closure", "Canonical schema delivery", "AI-ready certification"],
+    label: "$7k–$20k flat",
   },
   {
     number: "03",
-    icon: BarChart3,
-    title: "Alerts, Explanations, and Next Steps",
+    icon: FlaskConical,
+    title: "1-Week Agent Trial on Your Data",
     description:
-      "Jake flags what needs attention and tells you why — cash exposure, overdue collections, margin slippage — before it becomes a problem. No dashboard-diving required.",
+      "Once the data is clean, we run a 7-day guided trial on your real numbers — AR collections, cash position, anomaly detection, and close acceleration. You see what AI actually does before committing.",
     color: "#10b981",
-    details: ["Plain-English explanations", "Priority-ranked alerts", "Suggested next actions", "Escalation when it matters"],
+    details: ["AR & cash agents on your books", "Anomaly detection on your GL", "Close acceleration on your trial balance", "AI-narrated daily summary"],
+    label: "Included",
+  },
+  {
+    number: "04",
+    icon: Building2,
+    title: "Full 17-Agent Platform",
+    description:
+      "After the trial you choose your pack. Every tier runs on your clean data layer with full trust governance, SOC 2–aligned controls, and live ERP sync. No spreadsheets. No surprises.",
+    color: "#8b5cf6",
+    details: ["Monitoring, Operational, or CFO Intelligence pack", "17 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
+    label: "Subscription",
   },
 ];
 
@@ -47,61 +60,69 @@ export function HowItWorks() {
           className="text-center mb-20"
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
-            How It Works
+            The Hybrid Model
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            From messy data to CFO clarity
+            Data Rehab → AI Trial →
             <br />
-            <span className="gradient-text">in three steps.</span>
+            <span className="gradient-text">Agent Platform.</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            No six-month implementation. No 200-page consultant deck.
-            Just connect, activate, and watch the agents work.
+            Most construction companies can&apos;t use AI because their data is a mess.
+            We fix that first. Then we prove it works on your numbers. Then we hand you the platform.
           </p>
         </motion.div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
-          {/* Connecting line */}
-          <div className="hidden lg:block absolute top-16 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        {/* Stages — vertical timeline on mobile, horizontal on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 relative">
+          {/* Connecting line (desktop only) */}
+          <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-blue-500/20 via-amber-500/20 to-purple-500/20" />
 
-          {STEPS.map((step, i) => (
+          {STAGES.map((stage, i) => (
             <motion.div
-              key={step.number}
+              key={stage.number}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="relative glass rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300"
+              transition={{ duration: 0.5, delay: i * 0.12 }}
+              className="relative glass rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300 flex flex-col"
             >
-              {/* Step number */}
+              {/* Stage number */}
               <div
-                className="text-6xl font-black mb-6 leading-none"
-                style={{ color: `${step.color}25` }}
+                className="text-5xl font-black mb-4 leading-none"
+                style={{ color: `${stage.color}25` }}
               >
-                {step.number}
+                {stage.number}
               </div>
 
-              {/* Icon */}
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style={{ background: `${step.color}18`, border: `1px solid ${step.color}30` }}
-              >
-                <step.icon className="w-6 h-6" style={{ color: step.color }} />
+              {/* Icon + label */}
+              <div className="flex items-center gap-3 mb-5">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: `${stage.color}18`, border: `1px solid ${stage.color}30` }}
+                >
+                  <stage.icon className="w-5 h-5" style={{ color: stage.color }} />
+                </div>
+                <span
+                  className="text-xs font-bold px-2.5 py-1 rounded-full"
+                  style={{ background: `${stage.color}18`, color: stage.color }}
+                >
+                  {stage.label}
+                </span>
               </div>
 
-              <h3 className="text-white font-bold text-xl mb-3">{step.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                {step.description}
+              <h3 className="text-white font-bold text-base mb-3 leading-snug">{stage.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-5 flex-1">
+                {stage.description}
               </p>
 
               {/* Detail list */}
               <ul className="space-y-2">
-                {step.details.map((detail) => (
-                  <li key={detail} className="flex items-center gap-2 text-sm text-slate-400">
+                {stage.details.map((detail) => (
+                  <li key={detail} className="flex items-start gap-2 text-xs text-slate-400">
                     <span
-                      className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ background: step.color }}
+                      className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5"
+                      style={{ background: stage.color }}
                     />
                     {detail}
                   </li>
@@ -110,6 +131,21 @@ export function HowItWorks() {
             </motion.div>
           ))}
         </div>
+
+        {/* Confidence bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-14 text-center"
+        >
+          <p className="text-slate-400 text-sm">
+            <span className="text-white font-semibold">Key rule:</span>{" "}
+            We don&apos;t invoice Data Rehab until your quality gates pass and your data is documented AI-ready.
+            No clean data, no invoice.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

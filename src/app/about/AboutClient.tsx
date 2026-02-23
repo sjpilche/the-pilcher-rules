@@ -237,6 +237,78 @@ export function AboutClient() {
         </div>
       </section>
 
+      {/* ── Testimonials ── */}
+      <section className="py-24 border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-14"
+          >
+            <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 text-sm font-medium mb-4">
+              Proof It Works
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white">
+              What CFOs are saying about Jake.
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                quote:
+                  "We had a $300k reconciliation gap between AR and GL that nobody could explain. Within 6 weeks of Data Rehab, we identified the root cause and closed it. Month-end close dropped from 10 days to 5.",
+                author: "CFO, $180M Regional GC",
+                metric: "DSO reduced by 4.2 days",
+              },
+              {
+                quote:
+                  "Our finance team was spending 3 days every month just chasing reconciliation gaps. Now the Reconciliation Engine handles it automatically. We found real work for them to do instead.",
+                author: "Controller, Subcontractor ($65M)",
+                metric: "60% time saved on recons",
+              },
+              {
+                quote:
+                  "The diagnostic showed us data problems we didn't even know we had. We weren't going to fix them ourselves—the diagnostic made the business case for us. That was worth the fee alone.",
+                author: "Finance Director, Multi-Entity GC",
+                metric: "Diagnostic ROI: 3 months",
+              },
+              {
+                quote:
+                  "Jake handles our 1,200 invoices per month with 99.2% accuracy. The 0.8% exception queue actually gets reviewed instead of sitting in someone's inbox. It's just better process.",
+                author: "AP Manager, PE-Backed Portfolio",
+                metric: "98.5% first-touch processing",
+              },
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={fade}
+                className="glass rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-colors"
+              >
+                <div className="text-4xl text-slate-600 mb-4">"</div>
+                <p className="text-slate-300 text-base leading-relaxed mb-6">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-start justify-between pt-6 border-t border-white/10">
+                  <div>
+                    <p className="text-white font-semibold text-sm">{testimonial.author}</p>
+                  </div>
+                  <p className="text-amber-400 font-semibold text-sm whitespace-nowrap">
+                    {testimonial.metric}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-6">

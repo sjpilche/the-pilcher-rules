@@ -259,6 +259,31 @@ export default function SolutionsPage() {
           </div>
         </div>
 
+        {/* Social Proof */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium mb-3">
+              Proof It Works
+            </div>
+            <h2 className="text-2xl font-black text-white">
+              Real companies. Real results.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { stat: "$300k", desc: "Reconciliation gap closed", company: "Regional GC ($180M)" },
+              { stat: "5 days", desc: "Month-end close reduced to", company: "Multi-Entity GC" },
+              { stat: "99.2%", desc: "Invoice processing accuracy", company: "PE-Backed Portfolio" },
+            ].map((item, i) => (
+              <div key={i} className="glass rounded-xl p-6 text-center">
+                <div className="text-3xl font-black text-amber-400 mb-2">{item.stat}</div>
+                <p className="text-slate-400 text-sm mb-3">{item.desc}</p>
+                <p className="text-slate-500 text-xs">{item.company}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom CTA */}
         <div className="text-center glass rounded-2xl p-12">
           <h3 className="text-white font-black text-3xl mb-4">

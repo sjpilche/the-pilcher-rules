@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Jake CFO <noreply@jakecfo.com>",
+        from: "Jake CFO <onboarding@resend.dev>",
         to: toEmails,
         reply_to: data.email,
         subject: `🎯 Demo Request: ${data.firstName} ${data.lastName} — ${data.company}`,
@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Jake at jakecfo.com <hello@jakecfo.com>",
+        from: "Jake CFO <onboarding@resend.dev>",
         to: [data.email],
         subject: "Got your demo request — talk soon.",
         html: `

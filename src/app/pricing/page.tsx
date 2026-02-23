@@ -68,8 +68,8 @@ const STAGES = [
     name: "Data Rehab",
     tagline: "We fix it. You don't pay until it's clean.",
     description:
-      "We normalize your ERP, close reconciliation gaps, clean duplicate vendors and customers, and enable incremental sync. You get a certified, AI-ready data layer — or you don't pay.",
-    price: "$7k–$20k",
+      "We clean your data and hand you a database you fully own — reconciled, normalized, and AI-ready. Hosted where you choose. The deliverable is yours whether or not you ever run an agent. Scoped after the diagnostic. Invoiced on delivery.",
+    price: "Scoped after diagnostic",
     priceNote: "Flat fee. Invoiced on delivery, not kickoff.",
     color: "#f59e0b",
     deliverables: [

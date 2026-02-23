@@ -218,15 +218,17 @@ export default function DataRehabPage() {
               <Wrench className="w-6 h-6 text-amber-400" />
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1">Stage 02 — $7k–$20k flat</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1">Stage 02 — Priced after diagnostic</div>
               <h2 className="text-white font-black text-2xl">Data Rehab</h2>
             </div>
           </div>
 
           <p className="text-slate-400 text-base leading-relaxed mb-8 max-w-3xl">
-            This is where your platform shines. We go in and fix what the diagnostic found.
-            Flat fee. Invoiced on delivery — after quality gates pass and deliverables are documented.
-            If we can&apos;t get your data clean, you don&apos;t pay.
+            We go in and fix what the diagnostic found. The deliverable isn&apos;t a report or a
+            recommendation — it&apos;s a <span className="text-white font-semibold">database you fully own</span>,
+            hosted where you choose, loaded with your cleaned and reconciled financial data,
+            AI-ready and documented. Flat fee scoped after the diagnostic. Invoiced on delivery —
+            after quality gates pass. If we can&apos;t get your data clean, you don&apos;t pay.
           </p>
 
           <div className="space-y-4">
@@ -281,9 +283,9 @@ export default function DataRehabPage() {
                 body: "17 agents coordinated by the CFO Manager. One control plane for your whole finance operation.",
               },
               {
-                icon: "🔒",
-                title: "Clean data, forever",
-                body: "You keep the canonical schema and the quality gates whether or not you stay on the platform.",
+                icon: "🏦",
+                title: "Your database. Your data.",
+                body: "You own the cleaned database outright — the schema, the data, the quality gates. It's yours whether or not you ever run an agent.",
               },
             ].map((item) => (
               <div key={item.title}>

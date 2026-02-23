@@ -13,11 +13,11 @@ const GOOD_FIT = [
 ];
 
 const NOT_FIT = [
-  "You're under $5M and still running everything in spreadsheets",
-  "You want to explore AI as a concept or experiment",
-  "You need a BI tool or reporting dashboard upgrade",
-  "You don't have a finance person who can act on what Jake flags",
-  "You're looking for the lowest-cost option in the market",
+  "You're pre-revenue or under $3M with no ERP or accounting system",
+  "You want a reporting dashboard or BI tool, not automation",
+  "You prioritize upfront cost over measurable ROI",
+  "You don't have a finance person who can act on what Jake surfaces",
+  "You want to experiment with AI concepts rather than run it in production",
 ];
 
 export function WhoItsFor() {

@@ -40,7 +40,7 @@ const PRINCIPLES = [
 ];
 
 const STATS = [
-  { value: "12", label: "Specialized agents" },
+  { value: "17", label: "Specialized agents" },
   { value: "48", label: "Detection rules" },
   { value: "85.3%", label: "ML job cost accuracy" },
   { value: "24/7", label: "Always watching" },

@@ -242,13 +242,16 @@ export default function SolutionsPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href="/data-rehab"
-                      className="inline-flex items-center gap-1.5 mt-5 text-xs font-semibold transition-opacity hover:opacity-80"
-                      style={{ color: sol.color }}
-                    >
-                      See how Data Rehab works <ArrowRight className="w-3 h-3" />
-                    </Link>
+                    <div className="mt-5 pt-5 border-t border-white/5">
+                      <p className="text-slate-500 text-xs mb-2">Not sure if these apply to you?</p>
+                      <Link
+                        href="/demo"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold transition-opacity hover:opacity-80"
+                        style={{ color: sol.color }}
+                      >
+                        Get your free diagnostic — see your specific issues <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

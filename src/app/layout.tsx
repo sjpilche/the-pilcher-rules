@@ -4,8 +4,12 @@ import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { validateEnvVars } from "@/lib/env";
 
 const GA_ID = "G-ZFXT030WKV";
+
+// Validate environment configuration at startup
+validateEnvVars();
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

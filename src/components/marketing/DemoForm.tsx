@@ -6,13 +6,21 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Calendar, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 
+const REVENUE_OPTIONS = [
+  "Under $10M",
+  "$10M – $50M",
+  "$50M – $200M",
+  "$200M – $500M",
+  "Over $500M",
+] as const;
+
 const schema = z.object({
-  firstName: z.string().min(1, "Required"),
-  lastName: z.string().min(1, "Required"),
+  firstName: z.string().min(1, "Required").max(50),
+  lastName: z.string().min(1, "Required").max(50),
   email: z.string().email("Valid email required"),
-  company: z.string().min(1, "Required"),
-  revenue: z.string().optional(),
-  painPoint: z.string().optional(),
+  company: z.string().min(1, "Required").max(100),
+  revenue: z.enum(["", ...REVENUE_OPTIONS]).optional(),
+  painPoint: z.string().max(2000).optional(),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -122,11 +130,11 @@ export function DemoForm() {
             className="w-full px-4 py-3 rounded-xl bg-[#0d1424] border border-white/10 text-slate-300 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
           >
             <option value="">Select range</option>
-            <option>Under $10M</option>
-            <option>$10M – $50M</option>
-            <option>$50M – $200M</option>
-            <option>$200M – $500M</option>
-            <option>Over $500M</option>
+            {REVENUE_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
           </select>
         </div>
 

@@ -1,6 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { db, isDbConfigured } from "@/lib/db";
+import { checkRateLimit } from "@/lib/rate-limit";
+
+/**
+ * Escape HTML special characters to prevent injection in email templates
+ */
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (char) => map[char]);
+}
 
 const contactSchema = z.object({
   name: z.string().min(1).max(100),
@@ -10,13 +25,26 @@ const contactSchema = z.object({
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const data = contactSchema.parse(body);
-
     const ip =
       req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
       req.headers.get("x-real-ip") ??
-      null;
+      "unknown";
+
+    // Rate limiting: 5 requests per 15 minutes per IP
+    const rateLimitResult = checkRateLimit(ip, "/api/contact");
+    if (!rateLimitResult.allowed) {
+      const resetTime = new Date(rateLimitResult.resetAt).toISOString();
+      return NextResponse.json(
+        {
+          error: "Too many requests. Please try again later.",
+          resetAt: resetTime,
+        },
+        { status: 429 }
+      );
+    }
+
+    const body = await req.json();
+    const data = contactSchema.parse(body);
 
     // 1. Persist to database (source of truth — do this first)
     if (isDbConfigured()) {
@@ -56,10 +84,10 @@ export async function POST(req: NextRequest) {
         html: `
           <div style="font-family:sans-serif;max-width:600px;margin:0 auto;">
             <h2 style="color:#1e3a5f;">New Contact Message</h2>
-            <p><strong>Name:</strong> ${data.name}</p>
-            <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+            <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
+            <p><strong>Email:</strong> <a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></p>
             <hr/>
-            <p style="white-space:pre-wrap;">${data.message}</p>
+            <p style="white-space:pre-wrap;">${escapeHtml(data.message)}</p>
           </div>
         `,
       }),

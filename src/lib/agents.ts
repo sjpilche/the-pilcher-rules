@@ -216,7 +216,7 @@ export const AGENTS: Agent[] = [
       "CFO-level control plane",
     ],
     metrics: [
-      { label: "Agents Coordinated", value: "17" },
+      { label: "Agents Coordinated", value: "18" },
       { label: "Policy Rules", value: "Configurable" },
       { label: "Audit Coverage", value: "100%" },
     ],

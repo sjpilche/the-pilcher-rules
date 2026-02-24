@@ -74,7 +74,7 @@ export default function HomePage() {
               href="/agents"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-amber-500/20 text-slate-300 hover:text-white hover:border-amber-500/40 font-medium transition-all hover:bg-amber-500/5"
             >
-              View all 17 agents →
+              View all 18 agents →
             </a>
           </div>
         </div>

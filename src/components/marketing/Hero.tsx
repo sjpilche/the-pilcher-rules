@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, HardHat, ShieldCheck, TrendingUp, Database } from "lucide-react";
 
 const STATS = [
-  { value: "17", label: "Specialized Agents" },
+  { value: "18", label: "Specialized Agents" },
   { value: "100+", label: "KPIs Monitored Daily" },
   { value: "48", label: "Anomaly Detection Rules" },
   { value: "85.3%", label: "Job Cost ML Accuracy" },
@@ -114,7 +115,7 @@ export function Hero() {
             href="/agents"
             className="flex items-center gap-2 px-8 py-4 rounded-xl border border-amber-500/20 text-slate-200 hover:text-white hover:border-amber-500/40 font-semibold text-lg transition-all duration-200 hover:bg-amber-500/5"
           >
-            See All 17 Agents
+            See All 18 Agents
           </Link>
         </motion.div>
 
@@ -141,6 +142,32 @@ export function Hero() {
           <div className="i-beam" />
         </div>
       </div>
+
+      {/* Jake — standing watch in the corner */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.4 }}
+        className="absolute bottom-16 right-10 hidden lg:block group"
+      >
+        {/* Speech bubble — appears on hover */}
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          <div className="px-3 py-1.5 rounded-lg bg-[#0c1018] border border-amber-500/30 text-amber-300 text-xs font-medium shadow-lg">
+            On it.
+          </div>
+          <div className="w-2 h-2 bg-[#0c1018] border-r border-b border-amber-500/30 rotate-45 mx-auto -mt-1" />
+        </div>
+
+        <div className="animate-float drop-shadow-[0_0_16px_rgba(245,158,11,0.3)]">
+          <Image
+            src="/jake.png"
+            alt="Jake — your construction AI CFO"
+            width={72}
+            height={120}
+            className="opacity-80 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div

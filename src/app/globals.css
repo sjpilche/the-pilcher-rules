@@ -176,5 +176,6 @@ body {
 }
 
 .animate-float { animation: float 4s ease-in-out infinite; }
+.animate-float-slow { animation: float 6s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 .animate-scan { animation: scan 8s linear infinite; }

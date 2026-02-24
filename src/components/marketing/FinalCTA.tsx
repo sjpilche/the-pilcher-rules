@@ -3,13 +3,25 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
+import { JakeMascot } from "@/components/mascot/JakeMascot";
 
 export function FinalCTA() {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden group/section">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-950/15 to-transparent pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Jake — peeking in from the left because he heard his name */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="absolute left-8 bottom-16 hidden xl:block -rotate-3"
+      >
+        <JakeMascot quote="That's me." size={88} bubbleSide="right" />
+      </motion.div>
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <motion.div

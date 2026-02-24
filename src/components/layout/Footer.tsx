@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Zap, Linkedin, Twitter, Mail } from "lucide-react";
+import { LegoJake } from "@/components/mascot/LegoJake";
 
 const FOOTER_LINKS = {
   Product: [
@@ -45,7 +46,16 @@ export function Footer() {
               Jake is your AI CFO — 12 specialized capabilities purpose-built
               for construction finance. Not generic AI. Your CFO.
             </p>
-            <div className="flex items-center gap-3 mt-6">
+
+            {/* Jake mascot — standing at the bottom of the page like he owns the place */}
+            <div className="flex items-end gap-3 mt-5">
+              <LegoJake size={52} floating className="animate-float-slow opacity-75" />
+              <p className="text-slate-600 text-xs italic pb-1 leading-relaxed">
+                He handles<br />the numbers.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3 mt-4">
               <a
                 href="https://www.linkedin.com/company/jakecfo"
                 target="_blank"

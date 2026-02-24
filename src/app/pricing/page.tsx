@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JakeMascot } from "@/components/mascot/JakeMascot";
 import {
   CheckCircle2,
   ArrowRight,
@@ -114,7 +115,7 @@ const STAGES = [
     icon: Building2,
     label: "Full Agent Platform",
     name: "Jake Agent Platform",
-    tagline: "17 agents. Every dollar. One control plane.",
+    tagline: "18 agents. Every dollar. One control plane.",
     description:
       "After the trial, you choose your pack. All plans include the clean data layer, live ERP sync, and the full trust and governance architecture.",
     price: "$3k–$15k/mo",
@@ -124,7 +125,7 @@ const STAGES = [
       "Monitoring Pack ($3k–$8k/mo) — sync, quality gates, alerts, AI search",
       "Operational Pack ($5k–$10k/mo) — AR, cash, AP automation, close checklist",
       "CFO Intelligence ($10k–$15k+/mo) — custom agents, board dashboards, M&A readiness",
-      "All packs: 17 agents, trust layer, full audit trail",
+      "All packs: 18 agents, trust layer, full audit trail",
       "All packs: SOC 2–aligned controls",
       "All packs: Steve on speed dial",
     ],
@@ -266,7 +267,11 @@ export default function PricingPage() {
         </div>
 
         {/* Confidence statement */}
-        <div className="glass rounded-2xl p-10 mb-8 text-center">
+        <div className="glass rounded-2xl p-10 mb-8 text-center relative overflow-visible">
+          {/* Jake vouching for it */}
+          <div className="absolute -bottom-2 left-8 hidden lg:block -rotate-2">
+            <JakeMascot quote="I wrote that one." size={72} bubbleSide="right" />
+          </div>
           <Zap className="w-8 h-8 text-amber-400 mx-auto mb-4" />
           <h3 className="text-white font-black text-2xl mb-3">
             We don&apos;t get paid until your data is AI-ready.

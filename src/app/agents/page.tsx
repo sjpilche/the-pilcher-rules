@@ -17,7 +17,7 @@ export default function AgentsPage() {
             The Full Suite
           </div>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-5">
-            17 agents.{" "}
+            18 agents.{" "}
             <span className="gradient-text">One platform.</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">

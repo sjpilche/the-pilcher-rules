@@ -393,7 +393,7 @@ export default function DataRehabPage() {
               {
                 icon: "📊",
                 title: "Your CFO dashboard, live",
-                body: "17 agents coordinated by the CFO Manager. One control plane for your whole finance operation.",
+                body: "18 agents coordinated by the CFO Manager. One control plane for your whole finance operation.",
               },
               {
                 icon: "🏦",

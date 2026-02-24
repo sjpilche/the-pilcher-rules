@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Shield, Eye, Zap, TrendingUp } from "lucide-react";
+import { JakeMascot } from "@/components/mascot/JakeMascot";
 
 const PRINCIPLES = [
   {
@@ -40,7 +41,7 @@ const PRINCIPLES = [
 ];
 
 const STATS = [
-  { value: "17", label: "Specialized agents" },
+  { value: "18", label: "Specialized agents" },
   { value: "48", label: "Detection rules" },
   { value: "85.3%", label: "ML job cost accuracy" },
   { value: "24/7", label: "Always watching" },
@@ -317,10 +318,15 @@ export function AboutClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-3xl overflow-hidden"
+            className="relative rounded-3xl overflow-visible"
           >
+            {/* Jake — already on the job */}
+            <div className="absolute -bottom-2 right-6 hidden lg:block rotate-2 z-10">
+              <JakeMascot quote="Already am." size={76} bubbleSide="left" />
+            </div>
+
             {/* gradient bg */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent" />
             <div className="absolute inset-0 border border-blue-500/20 rounded-3xl" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-blue-600/15 blur-[80px]" />
 

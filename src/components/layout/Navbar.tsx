@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { LegoJakeHead } from "@/components/mascot/LegoJake";
 
 const NAV_LINKS = [
   { href: "/agents", label: "Capabilities" },
@@ -39,8 +40,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30 font-black text-black text-lg">
-            J
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
+            <LegoJakeHead size={26} />
           </div>
           <div className="flex flex-col leading-none">
             <span className="font-black text-white text-lg tracking-tight">Jake</span>

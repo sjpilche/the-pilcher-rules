@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { db, isDbConfigured } from "@/lib/db";
 import { DemoStatusSelect } from "./DemoStatusSelect";
 import LogoutButton from "./LogoutButton";

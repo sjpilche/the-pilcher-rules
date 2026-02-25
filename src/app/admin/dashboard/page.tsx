@@ -48,7 +48,7 @@ async function getData() {
     };
   } catch (err) {
     console.error("[Admin] DB query failed:", err);
-    return { demos: [], contacts: [], dbError: "Could not connect to database. Check POSTGRES_URL and Azure firewall settings." };
+    return { demos: [], contacts: [], dbError: "Could not connect to database. Check POSTGRES_URL environment variable." };
   }
 }
 
@@ -96,7 +96,7 @@ export default async function AdminDashboard() {
 
         {!dbConfigured && (
           <div className="mb-6 px-4 py-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
-            Database not configured. Set POSTGRES_URL in environment variables and open Azure firewall to see leads.
+            Database not configured. Set POSTGRES_URL in environment variables to see leads.
           </div>
         )}
 

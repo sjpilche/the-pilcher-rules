@@ -26,24 +26,30 @@ interface ContactSubmission {
 
 async function getData() {
   if (!isDbConfigured()) {
-    return { demos: [], contacts: [] };
+    return { demos: [], contacts: [], dbError: null };
   }
 
-  const [demosResult, contactsResult] = await Promise.all([
-    db.query<DemoRequest>(
-      `SELECT id, first_name, last_name, email, company, revenue, pain_point, status, created_at
-       FROM demo_requests ORDER BY created_at DESC`
-    ),
-    db.query<ContactSubmission>(
-      `SELECT id, name, email, message, created_at
-       FROM contact_submissions ORDER BY created_at DESC`
-    ),
-  ]);
+  try {
+    const [demosResult, contactsResult] = await Promise.all([
+      db.query<DemoRequest>(
+        `SELECT id, first_name, last_name, email, company, revenue, pain_point, status, created_at
+         FROM demo_requests ORDER BY created_at DESC`
+      ),
+      db.query<ContactSubmission>(
+        `SELECT id, name, email, message, created_at
+         FROM contact_submissions ORDER BY created_at DESC`
+      ),
+    ]);
 
-  return {
-    demos: demosResult.rows,
-    contacts: contactsResult.rows,
-  };
+    return {
+      demos: demosResult.rows,
+      contacts: contactsResult.rows,
+      dbError: null,
+    };
+  } catch (err) {
+    console.error("[Admin] DB query failed:", err);
+    return { demos: [], contacts: [], dbError: "Could not connect to database. Check POSTGRES_URL and Azure firewall settings." };
+  }
 }
 
 function formatDate(dateStr: string) {
@@ -55,7 +61,7 @@ function formatDate(dateStr: string) {
 }
 
 export default async function AdminDashboard() {
-  const { demos, contacts } = await getData();
+  const { demos, contacts, dbError } = await getData();
   const dbConfigured = isDbConfigured();
 
   return (
@@ -91,6 +97,12 @@ export default async function AdminDashboard() {
         {!dbConfigured && (
           <div className="mb-6 px-4 py-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
             Database not configured. Set POSTGRES_URL in environment variables and open Azure firewall to see leads.
+          </div>
+        )}
+
+        {dbError && (
+          <div className="mb-6 px-4 py-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+            {dbError}
           </div>
         )}
 

@@ -502,6 +502,34 @@ export const AGENTS: Agent[] = [
     ],
     status: "production",
   },
+  {
+    slug: "board-reporting",
+    name: "Board-Ready Reporting",
+    tagline: "Investor-grade financials, generated overnight.",
+    description:
+      "Automated financial reporting engine that assembles board decks, lender packages, and surety submissions from live data — formatted, narrated, and ready to send without a single spreadsheet.",
+    color: "#0ea5e9",
+    bgColor: "rgba(14,165,233,0.08)",
+    borderColor: "rgba(14,165,233,0.25)",
+    glowColor: "rgba(14,165,233,0.15)",
+    icon: "📊",
+    category: "Intelligence",
+    companyTypes: ["PE-Backed", "Multi-Entity", "GC"],
+    capabilities: [
+      "Automated board deck assembly",
+      "Lender & surety package generation",
+      "AI-narrated executive summaries",
+      "Period-over-period variance analysis",
+      "Custom KPI dashboards per stakeholder",
+      "One-click PDF/PPTX export",
+    ],
+    metrics: [
+      { label: "Report Types", value: "12 templates" },
+      { label: "Generation Time", value: "< 5 min" },
+      { label: "Audience", value: "Board / Lender / Surety" },
+    ],
+    status: "production",
+  },
 ];
 
 export const CATEGORIES: AgentCategory[] = [

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Clock } from "lucide-react";
 import { ContactForm } from "@/components/marketing/ContactForm";
+import { FinalCTA } from "@/components/marketing/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with The Pilcher Rules team.",
+  description: "Get in touch with the Jake by Pilcher Rules team.",
 };
 
 export default function ContactPage() {
@@ -17,7 +18,7 @@ export default function ContactPage() {
             <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
               Get in Touch
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5">
               Let&apos;s talk{" "}
               <span className="gradient-text">straight.</span>
             </h1>
@@ -62,6 +63,9 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </div>
+
+      {/* Consistent CTA at bottom of every page */}
+      <FinalCTA />
     </div>
   );
 }

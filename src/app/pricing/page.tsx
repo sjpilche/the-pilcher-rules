@@ -145,7 +145,7 @@ export default function PricingPage() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
             The Hybrid Model
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5">
             Data Rehab →{" "}
             <span className="gradient-text">AI Trial → Agent Platform.</span>
           </h1>

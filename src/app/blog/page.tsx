@@ -31,7 +31,7 @@ export default function BlogPage() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
             Jake&apos;s Insights
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5">
             Construction finance,
             <br />
             <span className="gradient-text">explained straight.</span>

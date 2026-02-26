@@ -3,7 +3,15 @@
     "allow": [
       "WebFetch(domain:www.cfojake.com)",
       "Bash(cat:*)",
-      "Bash(\"/c/code/the-pilcher-rules/src/content/blog/retainage-cash-flow-construction.md\":*)"
+      "Bash(\"/c/code/the-pilcher-rules/src/content/blog/retainage-cash-flow-construction.md\":*)",
+      "Bash(nslookup jakecfo.com)",
+      "Bash(git fetch)",
+      "Bash(npm uninstall @sendgrid/mail)"
+    ],
+    "additionalDirectories": [
+      "c:\\code\\hoaprojectintake\\server\\src\\services",
+      "c:\\code\\hoaprojectintake\\server",
+      "c:\\code\\hoaprojectintake\\src\\pages"
     ]
   }
 }

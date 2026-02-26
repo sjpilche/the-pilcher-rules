@@ -19,10 +19,10 @@ const STAGES = [
     icon: Wrench,
     title: "Data Rehab",
     description:
-      "We normalize your ERP, close the gaps, clean the duplicates, and patch the reconciliation issues. You get a certified, AI-ready data layer. We invoice on delivery — not kickoff.",
+      "We normalize your ERP, close the gaps, clean the duplicates, and patch the reconciliation issues. You get a certified, AI-ready data layer. Data Rehab typically $25k–$75k, scoped after your free diagnostic. We invoice on delivery — not kickoff.",
     color: "#f59e0b",
     details: ["ERP normalization (BC, SQL Server)", "Reconciliation gap closure", "Canonical schema delivery", "AI-ready certification"],
-    label: "$7k–$20k flat",
+    label: "$25k–$75k scoped",
   },
   {
     number: "03",
@@ -37,11 +37,11 @@ const STAGES = [
   {
     number: "04",
     icon: Building2,
-    title: "Full 17-Agent Platform",
+    title: "Full 18-Agent Platform",
     description:
       "After the trial you choose your pack. Every tier runs on your clean data layer with full trust governance, SOC 2–aligned controls, and live ERP sync. No spreadsheets. No surprises.",
     color: "#8b5cf6",
-    details: ["Monitoring, Operational, or CFO Intelligence pack", "18 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
+    details: ["Monitoring, Operational, or CFO Intelligence pack", "All 18 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
     label: "Subscription",
   },
 ];
@@ -62,7 +62,7 @@ export function HowItWorks() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
             The Hybrid Model
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             Data Rehab → AI Trial →
             <br />
             <span className="gradient-text">Agent Platform.</span>
@@ -89,7 +89,7 @@ export function HowItWorks() {
             >
               {/* Stage number */}
               <div
-                className="text-5xl font-black mb-4 leading-none"
+                className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 leading-none"
                 style={{ color: `${stage.color}25` }}
               >
                 {stage.number}

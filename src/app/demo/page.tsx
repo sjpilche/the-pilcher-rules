@@ -6,7 +6,7 @@ import { DemoForm } from "@/components/marketing/DemoForm";
 export const metadata: Metadata = {
   title: "Request a Demo",
   description:
-    "See The Pilcher Rules CFO AI Suite live with your own data. 30-minute personalized demo.",
+    "See the Jake AI CFO Suite live with your own data. 30-minute personalized demo.",
 };
 
 const WHAT_TO_EXPECT = [
@@ -26,13 +26,13 @@ export default function DemoPage() {
             <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
               30-Minute Demo
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-5 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5 leading-tight">
               See it with{" "}
               <span className="gradient-text">your numbers.</span>
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed mb-10">
               No slide decks. No generic screenshots. We&apos;ll connect to your
-              actual financial data and show you exactly what The Pilcher Rules
+              actual financial data and show you exactly what Jake
               would surface — today.
             </p>
 
@@ -53,7 +53,7 @@ export default function DemoPage() {
             <p className="text-slate-500 text-sm">
               Already exploring?{" "}
               <Link href="/agents" className="text-blue-400 hover:text-blue-300 underline">
-                Browse all 12 agents
+                Browse all 18 agents
               </Link>{" "}
               first.
             </p>

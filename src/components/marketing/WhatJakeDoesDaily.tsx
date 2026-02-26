@@ -71,7 +71,7 @@ export function WhatJakeDoesDaily() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
             A Day in the Life
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             What Jake actually does
             <br />
             <span className="gradient-text">while you&apos;re running the business.</span>

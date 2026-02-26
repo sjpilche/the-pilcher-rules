@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Solutions — Jake CFO",
   description:
-    "Clean your data. Prove AI works on it. Run your construction finances with 17 specialized agents. Built for GCs, subcontractors, multi-entity orgs, and PE-backed platforms.",
+    "Clean your data. Prove AI works on it. Run your construction finances with 18 specialized agents. Built for GCs, subcontractors, multi-entity orgs, and PE-backed platforms.",
 };
 
 const JOURNEY = [
@@ -38,7 +38,7 @@ const JOURNEY = [
   },
   {
     label: "Stage 4",
-    title: "Full 17-Agent Platform",
+    title: "Full 18-Agent Platform",
     description:
       "Monitoring, Operational, or CFO Intelligence pack — all built on your clean data layer with live ERP sync, trust governance, and SOC 2–aligned controls.",
     color: "#8b5cf6",
@@ -125,7 +125,7 @@ export default function SolutionsPage() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
             Solutions
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5">
             Clean data.{" "}
             <span className="gradient-text">Proven AI. Real results.</span>
           </h1>

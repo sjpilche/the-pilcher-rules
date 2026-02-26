@@ -35,7 +35,7 @@ export function WhoItsFor() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/15 bg-white/5 text-slate-400 text-sm font-medium mb-4">
             Is Jake Right for You?
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             This isn&apos;t for everyone.
             <br />
             <span className="gradient-text">Here&apos;s who it is — and isn&apos;t — for.</span>
@@ -106,7 +106,7 @@ export function WhoItsFor() {
           </p>
           <Link
             href="/demo"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold transition-all hover:-translate-y-0.5 shadow-lg shadow-amber-500/25"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold transition-all hover:-translate-y-0.5 shadow-lg shadow-[#FF6200]/25"
           >
             Schedule a 30-Minute Demo
             <ArrowRight className="w-4 h-4" />

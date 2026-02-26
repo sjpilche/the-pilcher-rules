@@ -70,7 +70,7 @@ export default async function AgentPage({ params }: Props) {
 
             <div className="text-5xl mb-5">{agent.icon}</div>
 
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
               {agent.name}
             </h1>
             <p

@@ -8,10 +8,17 @@
   --muted: #1a1f28;
   --muted-foreground: #8899aa;
 
-  /* Construction accent: amber/gold — hard hat, caution, steel */
-  --accent: #f59e0b;
-  --accent-dark: #d97706;
-  --accent-glow: rgba(245,158,11,0.15);
+  /* Primary brand: construction-blue */
+  --brand-blue: #0A2540;
+
+  /* Accent: construction orange */
+  --accent: #FF6200;
+  --accent-dark: #e05500;
+  --accent-glow: rgba(255,98,0,0.15);
+
+  /* Legacy amber (still used in some marketing sections) */
+  --amber: #f59e0b;
+  --amber-dark: #d97706;
 
   /* Secondary: steel blue — blueprints, structural */
   --steel: #4a7fa5;
@@ -90,7 +97,16 @@ body {
 /* Glow effects */
 .glow-amber { box-shadow: 0 0 30px rgba(245,158,11,0.2); }
 .glow-steel { box-shadow: 0 0 30px rgba(74,127,165,0.2); }
-.glow-orange { box-shadow: 0 0 30px rgba(251,146,60,0.2); }
+.glow-orange { box-shadow: 0 0 30px rgba(255,98,0,0.2); }
+.glow-brand { box-shadow: 0 0 30px rgba(255,98,0,0.25); }
+
+/* Orange gradient text — brand accent */
+.gradient-text-orange {
+  background: linear-gradient(135deg, #FF6200 0%, #ff8533 50%, #FF6200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 /* Blueprint grid background — like construction drawings */
 .grid-bg {

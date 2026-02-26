@@ -42,7 +42,7 @@ export function HowFastItStarts() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium mb-4">
             Getting Started
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             Up and running in days.
             <br />
             <span className="gradient-text">Not months.</span>
@@ -72,7 +72,7 @@ export function HowFastItStarts() {
                 >
                   {/* Icon circle */}
                   <div
-                    className="relative w-24 h-24 rounded-full flex items-center justify-center mb-6 border"
+                    className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-6 border"
                     style={{
                       background: `radial-gradient(circle, ${step.color}15, transparent)`,
                       borderColor: `${step.color}30`,

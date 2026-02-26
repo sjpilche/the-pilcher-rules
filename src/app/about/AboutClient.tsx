@@ -82,7 +82,7 @@ export function AboutClient() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-5xl md:text-7xl font-black text-white mb-8 leading-[1.05] tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 leading-[1.05] tracking-tight"
           >
             The AI operations
             <br />
@@ -188,7 +188,7 @@ export function AboutClient() {
             <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 text-sm font-medium mb-4">
               The rules we live by
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white">
               Principles, not promises.
             </h2>
           </motion.div>
@@ -251,7 +251,7 @@ export function AboutClient() {
             <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 text-sm font-medium mb-4">
               Proof It Works
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white">
               What CFOs are saying about Jake.
             </h2>
           </motion.div>
@@ -335,7 +335,7 @@ export function AboutClient() {
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                 Ready when you are
               </div>
-              <h3 className="text-white font-black text-4xl md:text-5xl mb-4">
+              <h3 className="text-white font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4">
                 Ready to put Jake to work?
               </h3>
               <p className="text-slate-400 text-lg mb-10 max-w-lg mx-auto">

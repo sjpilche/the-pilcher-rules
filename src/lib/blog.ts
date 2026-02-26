@@ -3,53 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
+// Re-export types & constants from the client-safe module
+export { BLOG_CATEGORIES, CATEGORY_COLORS } from "./blog-types";
+export type { BlogPost, BlogCategory } from "./blog-types";
+
+import type { BlogPost, BlogCategory } from "./blog-types";
+
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
-
-export interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  author: string;
-  category: BlogCategory;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  content: string;
-}
-
-export type BlogCategory =
-  | "AR & Collections"
-  | "Job Costing"
-  | "Cash Flow"
-  | "Compliance"
-  | "Close & Audit"
-  | "AI in Finance"
-  | "Construction Finance"
-  | "Leadership";
-
-export const BLOG_CATEGORIES: BlogCategory[] = [
-  "AR & Collections",
-  "Job Costing",
-  "Cash Flow",
-  "Compliance",
-  "Close & Audit",
-  "AI in Finance",
-  "Construction Finance",
-  "Leadership",
-];
-
-export const CATEGORY_COLORS: Record<BlogCategory, string> = {
-  "AR & Collections": "#ef4444",
-  "Job Costing": "#8b5cf6",
-  "Cash Flow": "#f59e0b",
-  "Compliance": "#10b981",
-  "Close & Audit": "#0ea5e9",
-  "AI in Finance": "#3b82f6",
-  "Construction Finance": "#6366f1",
-  "Leadership": "#ec4899",
-};
 
 export function getAllPosts(): BlogPost[] {
   if (!fs.existsSync(BLOG_DIR)) return [];

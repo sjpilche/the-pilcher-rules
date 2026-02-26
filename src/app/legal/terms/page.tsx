@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Terms of Service",
   description:
-    "Terms governing use of the Jake by Pilcher Rules website and services.",
+    "Terms governing use of the Jake CFO website and services.",
 };
 
 export default function TermsPage() {
@@ -25,8 +25,8 @@ export default function TermsPage() {
         <p>
           These Terms of Service (&quot;Terms&quot;) govern your access to and
           use of the jakecfo.com website and the Jake product (collectively, the
-          &quot;Service&quot;) operated by Pilcher Rules LLC (&quot;we,&quot;
-          &quot;us,&quot; or &quot;Pilcher Rules&quot;). By accessing or using
+          &quot;Service&quot;) operated by Jake CFO LLC (&quot;we,&quot;
+          &quot;us,&quot; or &quot;Jake CFO&quot;). By accessing or using
           the Service, you agree to be bound by these Terms. If you do not
           agree, do not use the Service.
         </p>
@@ -103,8 +103,8 @@ export default function TermsPage() {
           </h2>
           <p>
             All content on the Service — including text, graphics, logos, icons,
-            images, software, and the Jake brand — is the property of Pilcher
-            Rules LLC or its licensors and is protected by United States and
+            images, software, and the Jake brand — is the property of Jake
+            CFO LLC or its licensors and is protected by United States and
             international intellectual property laws. You may not reproduce,
             distribute, modify, create derivative works of, publicly display, or
             otherwise exploit any content without our prior written consent.
@@ -170,7 +170,7 @@ export default function TermsPage() {
             8. Limitation of Liability
           </h2>
           <p>
-            TO THE MAXIMUM EXTENT PERMITTED BY LAW, PILCHER RULES LLC AND ITS
+            TO THE MAXIMUM EXTENT PERMITTED BY LAW, JAKE CFO LLC AND ITS
             OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR
             ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
             DAMAGES, OR ANY LOSS OF PROFITS OR REVENUE, WHETHER INCURRED
@@ -202,7 +202,7 @@ export default function TermsPage() {
             9. Indemnification
           </h2>
           <p>
-            You agree to indemnify, defend, and hold harmless Pilcher Rules LLC
+            You agree to indemnify, defend, and hold harmless Jake CFO LLC
             from any claims, damages, losses, liabilities, and expenses
             (including reasonable attorneys&apos; fees) arising out of or related
             to your use of the Service or violation of these Terms.
@@ -257,7 +257,7 @@ export default function TermsPage() {
           </h2>
           <p>Questions about these Terms? Contact us:</p>
           <div className="mt-3 p-4 rounded-lg bg-white/5 border border-white/10 text-sm space-y-1">
-            <p className="text-white font-medium">Pilcher Rules LLC</p>
+            <p className="text-white font-medium">Jake CFO LLC</p>
             <p>
               Email:{" "}
               <a

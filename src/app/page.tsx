@@ -10,11 +10,10 @@ import { FinalCTA } from "@/components/marketing/FinalCTA";
 import { JumpNav } from "@/components/marketing/JumpNav";
 import { StickyCtaBar } from "@/components/marketing/StickyCtaBar";
 
-/* CHANGED: "Jake CFO" → "Jake by Pilcher Rules", 17 → 18 agents, added board-reporting */
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Jake by Pilcher Rules",
+  name: "Jake CFO",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://jakecfo.com",
@@ -28,7 +27,7 @@ const jsonLd = {
   },
   provider: {
     "@type": "Organization",
-    name: "Jake by Pilcher Rules",
+    name: "Jake CFO",
     url: "https://jakecfo.com",
   },
   featureList: [

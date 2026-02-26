@@ -53,7 +53,7 @@ export function Navbar() {
               Jake
             </span>
             <span className="text-slate-400 text-[9px] font-medium tracking-widest uppercase">
-              by Pilcher Rules
+              Your Construction CFO
             </span>
           </div>
         </Link>
@@ -85,10 +85,10 @@ export function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
           <Link
-            href="/demo"
+            href="/diagnostic"
             className="px-5 py-2 rounded-lg bg-[#FF6200] hover:bg-[#e85800] text-white text-sm font-bold transition-all duration-200 shadow-lg shadow-[#FF6200]/25 hover:shadow-[#FF6200]/40"
           >
-            Start Free Diagnostic
+            Schedule Free Diagnostic
           </Link>
         </div>
 
@@ -137,10 +137,10 @@ export function Navbar() {
             })}
             <div className="mt-3 pt-3 border-t border-white/10">
               <Link
-                href="/demo"
+                href="/diagnostic"
                 className="block w-full text-center px-5 py-3 rounded-lg bg-[#FF6200] hover:bg-[#e85800] text-white text-sm font-bold transition-all shadow-lg shadow-[#FF6200]/25"
               >
-                Start Free Diagnostic
+                Schedule Free Diagnostic
               </Link>
             </div>
           </div>

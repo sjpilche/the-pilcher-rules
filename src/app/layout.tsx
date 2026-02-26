@@ -26,15 +26,15 @@ const geistMono = Geist_Mono({
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Jake by Pilcher Rules",
-  alternateName: "Jake CFO",
+  name: "Jake CFO",
+  alternateName: "Jake — Your Construction CFO",
   url: "https://jakecfo.com",
   logo: "https://jakecfo.com/jake.png",
   description:
     "AI CFO platform built for construction companies. 18 specialized agents covering AR collections, job costing, AIA billing, anomaly detection, cash flow forecasting, and more.",
   founder: {
     "@type": "Person",
-    name: "Steve Pilcher",
+    name: "Steve",
     jobTitle: "Founder & CEO",
   },
   foundingDate: "2024",
@@ -63,7 +63,7 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is Jake by Pilcher Rules?",
+      name: "What is Jake CFO?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Jake is an AI CFO platform purpose-built for construction companies. It includes 18 specialized agents that automate AR collections, job costing, cash flow forecasting, anomaly detection, AIA billing, and more — all coordinated by a central CFO Manager agent.",
@@ -109,8 +109,8 @@ export const metadata: Metadata = {
     "facebook-domain-verification": "r7cevgbjbjz7ehl4lgrm67extdj4tv",
   },
   title: {
-    default: "Jake by Pilcher Rules — Your Construction AI CFO",
-    template: "%s | Jake by Pilcher Rules",
+    default: "Jake — Your Construction AI CFO",
+    template: "%s | Jake CFO",
   },
   description:
     "Jake is your AI CFO built for construction. 18 specialized agents covering AR collections, job costing, AIA billing, anomaly detection, and more — one intelligent system that runs your financial operation.",
@@ -122,11 +122,11 @@ export const metadata: Metadata = {
     "AIA billing software",
     "anomaly detection finance",
     "Jake CFO",
-    "Pilcher Rules",
+    "Jake CFO",
     "jakecfo.com",
   ],
   openGraph: {
-    title: "Jake by Pilcher Rules — Your Construction AI CFO",
+    title: "Jake — Your Construction AI CFO",
     description:
       "18 specialized AI agents. One construction CFO that never sleeps.",
     type: "website",
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jake by Pilcher Rules — Your Construction AI CFO",
+    title: "Jake — Your Construction AI CFO",
     description:
       "18 specialized AI agents. One construction CFO that never sleeps.",
   },

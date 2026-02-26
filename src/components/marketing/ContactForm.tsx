@@ -66,7 +66,7 @@ export function ContactForm() {
           <input
             {...register("name")}
             className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-            placeholder="Steve Pilcher"
+            placeholder="John Martinez"
           />
           {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
         </div>

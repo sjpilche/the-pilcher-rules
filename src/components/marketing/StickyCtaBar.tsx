@@ -36,10 +36,10 @@ export function StickyCtaBar() {
           Book 30-min Demo
         </Link>
         <Link
-          href="/demo"
+          href="/diagnostic"
           className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-[#FF6200]/30 text-white text-sm font-bold transition-all hover:bg-[#FF6200]/10"
         >
-          Free Diagnostic
+          Schedule Free
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
         <button
@@ -73,10 +73,10 @@ export function StickyCtaBar() {
           Book 30-min Demo
         </Link>
         <Link
-          href="/demo"
+          href="/diagnostic"
           className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0A2540]/90 backdrop-blur-xl border border-[#FF6200]/30 text-white text-sm font-bold transition-all hover:bg-[#0A2540] hover:border-[#FF6200]/50"
         >
-          Start Free Diagnostic
+          Schedule Free Diagnostic
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>

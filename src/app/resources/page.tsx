@@ -169,10 +169,10 @@ export default function ResourcesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/demo"
+              href="/diagnostic"
               className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold transition-all hover:-translate-y-0.5 shadow-xl shadow-[#FF6200]/25"
             >
-              Start Free Diagnostic
+              Schedule Free Diagnostic
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link

@@ -58,8 +58,8 @@ const STAGES = [
       "Full reconciliation report",
       "AI Readiness Score with action items",
     ],
-    cta: "Get Your Free Diagnostic",
-    ctaHref: "/demo",
+    cta: "Schedule Free Diagnostic",
+    ctaHref: "/diagnostic",
     highlight: false,
   },
   {
@@ -103,11 +103,11 @@ const STAGES = [
       "Anomaly Detection on your GL",
       "Close Acceleration on your trial balance",
       "AI-narrated daily summary",
-      "Guided by Steve personally",
+      "Guided by Jake's team",
       "Go/no-go decision at day 7",
     ],
-    cta: "Start with the Diagnostic",
-    ctaHref: "/demo",
+    cta: "Schedule the Diagnostic",
+    ctaHref: "/diagnostic",
     highlight: true,
   },
   {
@@ -127,7 +127,7 @@ const STAGES = [
       "CFO Intelligence ($10k–$15k+/mo) — custom agents, board dashboards, M&A readiness",
       "All packs: 18 agents, trust layer, full audit trail",
       "All packs: SOC 2–aligned controls",
-      "All packs: Steve on speed dial",
+      "All packs: dedicated support team on speed dial",
     ],
     cta: "See the Full Platform",
     ctaHref: "/agents",
@@ -293,10 +293,10 @@ export default function PricingPage() {
             We&apos;ll send you a full AI Readiness report within 5 business days.
           </p>
           <Link
-            href="/demo"
+            href="/diagnostic"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm bg-blue-600 hover:bg-blue-500 text-white transition-all hover:-translate-y-0.5"
           >
-            Request Your Free Diagnostic
+            Schedule Your Free Diagnostic
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

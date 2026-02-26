@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "How Jake by Pilcher Rules collects, uses, and protects your information.",
+    "How Jake CFO collects, uses, and protects your information.",
 };
 
 export default function PrivacyPage() {
@@ -23,8 +23,8 @@ export default function PrivacyPage() {
 
       <div className="prose prose-invert prose-slate max-w-none space-y-8 text-slate-300 leading-relaxed">
         <p>
-          Pilcher Rules LLC (&quot;we,&quot; &quot;us,&quot; or &quot;Pilcher
-          Rules&quot;) operates the website jakecfo.com and the Jake product
+          Jake CFO LLC (&quot;we,&quot; &quot;us,&quot; or &quot;Jake
+          CFO&quot;) operates the website jakecfo.com and the Jake product
           (collectively, the &quot;Service&quot;). This Privacy Policy explains
           what information we collect, how we use it, and the choices you have.
         </p>
@@ -156,7 +156,7 @@ export default function PrivacyPage() {
           <p>
             Form submissions and account data are stored in a PostgreSQL
             database hosted by Neon (neon.tech) with encryption at rest and in
-            transit. Access is restricted to authorized Pilcher Rules team
+            transit. Access is restricted to authorized Jake CFO team
             members via password-protected admin dashboards. Email notifications
             are delivered via Resend (resend.com) using TLS-encrypted
             connections.
@@ -351,7 +351,7 @@ export default function PrivacyPage() {
             us:
           </p>
           <div className="mt-3 p-4 rounded-lg bg-white/5 border border-white/10 text-sm space-y-1">
-            <p className="text-white font-medium">Pilcher Rules LLC</p>
+            <p className="text-white font-medium">Jake CFO LLC</p>
             <p>
               Email:{" "}
               <a

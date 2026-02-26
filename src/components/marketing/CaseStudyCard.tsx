@@ -316,10 +316,10 @@ export function CaseStudyCard({
                     Want to see what Jake finds in <strong className="text-white">your</strong> books? The diagnostic is free.
                   </p>
                   <Link
-                    href="/demo"
+                    href="/diagnostic"
                     className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white text-sm font-bold transition-all hover:-translate-y-0.5 shadow-lg shadow-[#FF6200]/25"
                   >
-                    Start Free Diagnostic
+                    Schedule Free Diagnostic
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </Link>
                   <Link

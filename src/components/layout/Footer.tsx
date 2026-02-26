@@ -6,7 +6,7 @@ const FOOTER_COLUMNS = {
   Product: [
     { href: "/agents", label: "All Agents" },
     { href: "/live-demo", label: "Live Demo" },
-    { href: "/demo", label: "Free Diagnostic" },
+    { href: "/diagnostic", label: "Free Diagnostic" },
     { href: "/pricing", label: "Pricing" },
     { href: "/solutions", label: "Solutions" },
   ],
@@ -42,7 +42,7 @@ export function Footer() {
               <div className="flex flex-col leading-none">
                 <span className="font-black text-white text-lg">Jake</span>
                 <span className="text-slate-400 text-[9px] tracking-widest uppercase">
-                  by Pilcher Rules
+                  Your Construction CFO
                 </span>
               </div>
             </Link>
@@ -99,8 +99,8 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} Jake &middot; Pilcher Rules LLC
-            &middot; All rights reserved.
+            &copy; {new Date().getFullYear()} Jake CFO &middot; All rights
+            reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link

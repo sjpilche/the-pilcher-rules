@@ -138,12 +138,11 @@ export function Hero() {
           className="flex items-center justify-center gap-3 mb-10"
         >
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#FF6200] to-[#e05500] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-[#FF6200]/25 overflow-hidden">
-            SP
+            J
           </div>
           <p className="text-slate-400 text-sm">
-            Built by{" "}
-            <span className="text-white font-semibold">Steve Pilcher</span>
-            <span className="text-slate-500"> — 18-year construction CFO</span>
+            <span className="text-white font-semibold">Jake</span>
+            <span className="text-slate-500"> — built by construction CFOs, for construction CFOs</span>
           </p>
         </motion.div>
 
@@ -165,7 +164,6 @@ export function Hero() {
           ))}
         </motion.div>
 
-        {/* CHANGED: CTAs — primary is "Start Free Diagnostic" → /demo, brand orange */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -173,10 +171,10 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
         >
           <Link
-            href="/demo"
+            href="/diagnostic"
             className="group flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold text-lg transition-all duration-200 shadow-xl shadow-[#FF6200]/25 hover:shadow-[#FF6200]/40 hover:-translate-y-0.5"
           >
-            Start Free Diagnostic
+            Schedule Free Diagnostic
             <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
           <Link

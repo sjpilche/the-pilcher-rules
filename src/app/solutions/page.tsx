@@ -295,10 +295,10 @@ export default function SolutionsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/demo"
+              href="/diagnostic"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-600/25"
             >
-              Request Free Diagnostic
+              Schedule Free Diagnostic
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link

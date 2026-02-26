@@ -47,11 +47,11 @@ export function FinalCTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/demo"
+              href="/diagnostic"
               className="group flex items-center gap-2.5 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold text-base sm:text-lg transition-all duration-200 shadow-xl shadow-[#FF6200]/25 hover:shadow-[#FF6200]/40 hover:-translate-y-0.5"
             >
               <Calendar className="w-5 h-5" />
-              Request Your Free Diagnostic
+              Schedule Your Free Diagnostic
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link

@@ -113,7 +113,7 @@ export function InteractiveDemo() {
 
         {/* App shell */}
         <div className="flex min-h-[560px] bg-[#080c14]">
-          {/* CHANGED: Sidebar — "The Pilcher Rules" → "Jake" */}
+          {/* Sidebar */}
           <div className="w-48 border-r border-white/5 bg-[#0a0f1a] flex flex-col py-4 px-3 gap-1 flex-shrink-0 hidden md:flex">
             <div className="px-3 py-2 mb-3">
               <div className="text-white font-black text-sm">Jake</div>
@@ -141,10 +141,10 @@ export function InteractiveDemo() {
             <div className="mt-auto px-3 pt-4 border-t border-white/5">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded-full bg-[#FF6200]/20 flex items-center justify-center text-[#FF6200] text-[9px] font-bold">
-                  SP
+                  You
                 </div>
                 <div>
-                  <div className="text-white text-[10px] font-medium">Steve Pilcher</div>
+                  <div className="text-white text-[10px] font-medium">Your Company</div>
                   <div className="text-slate-600 text-[9px]">Admin</div>
                 </div>
               </div>

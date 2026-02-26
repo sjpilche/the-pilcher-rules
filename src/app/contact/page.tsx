@@ -5,7 +5,7 @@ import { FinalCTA } from "@/components/marketing/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with the Jake by Pilcher Rules team.",
+  description: "Get in touch with the Jake CFO team.",
 };
 
 export default function ContactPage() {

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Calendar, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
+import { Stethoscope, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 
 const REVENUE_OPTIONS = [
   "Under $10M",
@@ -14,18 +14,29 @@ const REVENUE_OPTIONS = [
   "Over $500M",
 ] as const;
 
+const ERP_OPTIONS = [
+  "Sage 300 CRE",
+  "Sage Intacct",
+  "Procore",
+  "Viewpoint Vista",
+  "Foundation Software",
+  "QuickBooks",
+  "Other / Not sure",
+] as const;
+
 const schema = z.object({
   firstName: z.string().min(1, "Required").max(50),
   lastName: z.string().min(1, "Required").max(50),
   email: z.string().email("Valid email required"),
   company: z.string().min(1, "Required").max(100),
   revenue: z.enum(["", ...REVENUE_OPTIONS]).optional(),
-  painPoint: z.string().max(2000).optional(),
+  erp: z.enum(["", ...ERP_OPTIONS]).optional(),
+  biggestPain: z.string().max(2000).optional(),
 });
 
 type FormData = z.infer<typeof schema>;
 
-export function DemoForm() {
+export function DiagnosticForm() {
   const [submitted, setSubmitted] = useState(false);
   const [serverError, setServerError] = useState("");
 
@@ -41,7 +52,10 @@ export function DemoForm() {
       const res = await fetch("/api/demo-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          painPoint: `[DIAGNOSTIC REQUEST] ERP: ${data.erp || "Not specified"}\n\n${data.biggestPain || ""}`,
+        }),
       });
       if (!res.ok) {
         const err = await res.json();
@@ -60,10 +74,10 @@ export function DemoForm() {
         <div className="w-16 h-16 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center">
           <CheckCircle2 className="w-8 h-8 text-green-400" />
         </div>
-        <h3 className="text-white font-bold text-xl">We got it.</h3>
+        <h3 className="text-white font-bold text-xl">You&apos;re on the list.</h3>
         <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-          We&apos;ll reach out within 1 business day to schedule your demo.
-          Check your inbox — we sent a confirmation.
+          Jake&apos;s team will reach out within 1 business day to schedule your
+          diagnostic. Check your inbox for a confirmation.
         </p>
       </div>
     );
@@ -71,14 +85,14 @@ export function DemoForm() {
 
   return (
     <div className="glass rounded-2xl p-8">
-      <h2 className="text-white font-bold text-xl mb-6">Schedule your demo</h2>
+      <h2 className="text-white font-bold text-xl mb-6">Schedule your diagnostic</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-1.5">First name</label>
             <input
               {...register("firstName")}
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm"
               placeholder="John"
             />
             {errors.firstName && (
@@ -89,7 +103,7 @@ export function DemoForm() {
             <label className="block text-sm font-medium text-slate-300 mb-1.5">Last name</label>
             <input
               {...register("lastName")}
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm"
               placeholder="Martinez"
             />
             {errors.lastName && (
@@ -103,7 +117,7 @@ export function DemoForm() {
           <input
             {...register("email")}
             type="email"
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm"
             placeholder="cfo@yourcompany.com"
           />
           {errors.email && (
@@ -115,7 +129,7 @@ export function DemoForm() {
           <label className="block text-sm font-medium text-slate-300 mb-1.5">Company name</label>
           <input
             {...register("company")}
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm"
             placeholder="Your construction company"
           />
           {errors.company && (
@@ -123,30 +137,46 @@ export function DemoForm() {
           )}
         </div>
 
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1.5">Annual revenue (approx)</label>
-          <select
-            {...register("revenue")}
-            className="w-full px-4 py-3 rounded-xl bg-[#0d1424] border border-white/10 text-slate-300 focus:outline-none focus:border-blue-500/50 transition-all text-sm"
-          >
-            <option value="">Select range</option>
-            {REVENUE_OPTIONS.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-slate-300 mb-1.5">Annual revenue</label>
+            <select
+              {...register("revenue")}
+              className="w-full px-4 py-3 rounded-xl bg-[#0d1424] border border-white/10 text-slate-300 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm"
+            >
+              <option value="">Select range</option>
+              {REVENUE_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-slate-300 mb-1.5">Current ERP</label>
+            <select
+              {...register("erp")}
+              className="w-full px-4 py-3 rounded-xl bg-[#0d1424] border border-white/10 text-slate-300 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm"
+            >
+              <option value="">Select ERP</option>
+              {ERP_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div>
           <label className="block text-sm font-medium text-slate-300 mb-1.5">
-            What&apos;s your biggest financial pain right now?
+            What&apos;s the messiest part of your financial data right now?
           </label>
           <textarea
-            {...register("painPoint")}
+            {...register("biggestPain")}
             rows={3}
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-all text-sm resize-none"
-            placeholder="AR aging, month-end close, job cost visibility..."
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#FF6200]/50 transition-all text-sm resize-none"
+            placeholder="AR aging is unreliable, cost codes are inconsistent, month-end takes forever..."
           />
         </div>
 
@@ -159,19 +189,19 @@ export function DemoForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-600/25"
+          className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-[#FF6200]/25"
         >
           {isSubmitting ? (
             <Loader2 className="w-4 h-4 animate-spin" />
           ) : (
-            <Calendar className="w-4 h-4" />
+            <Stethoscope className="w-4 h-4" />
           )}
-          {isSubmitting ? "Sending..." : "Request My Demo"}
+          {isSubmitting ? "Sending..." : "Schedule My Diagnostic"}
           {!isSubmitting && <ArrowRight className="w-4 h-4" />}
         </button>
 
         <p className="text-slate-600 text-xs text-center">
-          We&apos;ll reach out within 1 business day to schedule.
+          Free. No credit card. Jake&apos;s team will reach out within 1 business day.
         </p>
       </form>
     </div>

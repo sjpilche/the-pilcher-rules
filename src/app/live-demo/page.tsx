@@ -3,7 +3,6 @@ import Link from "next/link";
 import { InteractiveDemo } from "@/components/demo/InteractiveDemo";
 import { ArrowRight, AlertCircle } from "lucide-react";
 
-/* CHANGED: branding → "Jake", removed "The Pilcher Rules" */
 export const metadata: Metadata = {
   title: "Live Demo",
   description:
@@ -40,10 +39,10 @@ export default function LiveDemoPage() {
             </p>
           </div>
           <Link
-            href="/demo"
+            href="/diagnostic"
             className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#FF6200] hover:bg-[#e85800] text-white text-sm font-bold transition-all shadow-lg shadow-[#FF6200]/25"
           >
-            Start Free Diagnostic
+            Schedule Free Diagnostic
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -64,10 +63,10 @@ export default function LiveDemoPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/demo"
+              href="/diagnostic"
               className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold transition-all hover:-translate-y-0.5 shadow-xl shadow-[#FF6200]/25"
             >
-              Start Free Diagnostic
+              Schedule Free Diagnostic
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link

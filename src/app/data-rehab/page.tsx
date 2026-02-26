@@ -18,7 +18,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-/* CHANGED: metadata — "Jake CFO" → "Jake by Pilcher Rules", pricing aligned */
 export const metadata: Metadata = {
   title: "Data Rehab",
   description:
@@ -29,10 +28,10 @@ export const metadata: Metadata = {
     "AI readiness assessment construction",
     "ERP normalization construction",
     "messy financial data fix",
-    "Pilcher Rules",
+    "Jake CFO",
   ],
   openGraph: {
-    title: "Data Rehab — Jake by Pilcher Rules",
+    title: "Data Rehab — Jake CFO",
     description:
       "We diagnose your financial data, clean it, and certify it AI-ready. Typically $25k–$75k. No clean data, no invoice.",
     url: "https://jakecfo.com/data-rehab",
@@ -205,10 +204,10 @@ export default function DataRehabPage() {
           {/* CHANGED: CTA buttons → brand orange primary */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/demo"
+              href="/diagnostic"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold transition-all hover:-translate-y-0.5 shadow-xl shadow-[#FF6200]/25"
             >
-              Start Free Diagnostic
+              Schedule Free Diagnostic
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
@@ -582,17 +581,17 @@ export default function DataRehabPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/demo"
+                    href="/diagnostic"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#FF6200] hover:bg-[#e85800] text-white font-bold transition-all hover:-translate-y-0.5 shadow-xl shadow-[#FF6200]/25"
                   >
-                    Start Free Diagnostic
+                    Schedule Free Diagnostic
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/15 text-slate-200 hover:text-white hover:border-white/30 font-semibold transition-all hover:bg-white/5"
                   >
-                    Talk to Steve
+                    Talk to Jake&apos;s Team
                   </Link>
                 </div>
                 <p className="text-slate-600 text-xs mt-4">

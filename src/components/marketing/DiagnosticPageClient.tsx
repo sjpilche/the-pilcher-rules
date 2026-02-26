@@ -377,9 +377,13 @@ export function DiagnosticPageClient() {
               <br />
               <span className="gradient-text-orange">Now find out what it&apos;s costing you.</span>
             </h2>
-            <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-              The diagnostic is free. The report is yours to keep — whether you
+            <p className="text-slate-400 text-base mb-4 max-w-lg mx-auto">
+              The assessment is free. The report is yours to keep — whether you
               ever use Jake or not. No strings. No catch.
+            </p>
+            <p className="text-slate-500 text-sm mb-8 max-w-md mx-auto">
+              If we find problems? Data Rehab starts at <span className="text-white font-semibold">$5k</span> — cheap
+              enough for a CFO to expense without board approval.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a

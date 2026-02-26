@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "Data Rehab",
   description:
-    "AI can't fix what it can't read. We diagnose your financial data, clean it, and certify it AI-ready — typically $25k–$75k, scoped after your free diagnostic. No clean data, no invoice.",
+    "AI can't fix what it can't read. We clean your financial data and hand you an AI-ready database you own — starting at $5k. Free assessment. No clean data, no invoice.",
   keywords: [
     "construction ERP data cleanup",
     "financial data reconciliation",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Data Rehab — Jake CFO",
     description:
-      "We diagnose your financial data, clean it, and certify it AI-ready. Typically $25k–$75k. No clean data, no invoice.",
+      "We clean your financial data and hand you an AI-ready database you own. Starting at $5k. No clean data, no invoice.",
     url: "https://jakecfo.com/data-rehab",
     type: "website",
   },
@@ -133,12 +133,12 @@ const REHAB_STEPS = [
 ];
 
 const CASE_STUDY = {
-  company: "Regional GC, $180M annual revenue",
-  challenge: "AR aging report showed $2.1M outstanding, but GL only reconciled to $1.8M. Finance team spent 3 days every month investigating the $300k gap. No confidence in which jobs were profitable.",
-  rehab: "Data Rehab took 6 weeks. We normalized 4 years of BC data, deduped 340 duplicate customers, closed 47 unmatched invoices, and fixed job cost GL mappings.",
-  cost: "$52,000",
-  timeline: "6 weeks",
-  outcome: "AR now reconciles perfectly to GL. Collections team uses the clean data to reduce DSO by 4.2 days. Finance month-end close dropped from 10 days to 5 days.",
+  company: "Regional GC, $45M annual revenue",
+  challenge: "AR aging report showed $680k outstanding, but GL only reconciled to $540k. Controller spent 2 days every month-end chasing the $140k gap. No confidence in which jobs were profitable.",
+  rehab: "Data Rehab (Pro tier) took 3 weeks. We normalized 2 years of Sage data, deduped 89 vendors, closed 23 unmatched invoices, and fixed cost code GL mappings.",
+  cost: "$7,500",
+  timeline: "3 weeks",
+  outcome: "AR now reconciles perfectly to GL. Collections team recovered $140k in the first 30 days. Month-end close dropped from 8 days to 4. CFO expensed the entire rehab.",
 };
 
 const FAQ_ITEMS = [
@@ -168,9 +168,9 @@ const FAQ_ITEMS = [
       "No. You own the cleaned database completely — the schema, the data, the quality documentation. You can use it with any BI tool, reporting system, or AI platform you choose. The 1-week trial shows you what Jake's agents can do with it, but you're never locked in.",
   },
   {
-    question: "How much does Data Rehab typically cost?",
+    question: "How much does Data Rehab cost?",
     answer:
-      "Typically $25k–$75k depending on complexity. The free diagnostic scopes the exact price, timeline, and deliverables before you commit to anything.",
+      "Basic is $5,000 (single ERP, 1–2 years data). Pro is $7,500–$10,000 (multi-system, 3+ years, advanced anomaly rules). The free assessment scopes which tier fits. Both include a 1-week Jake agent trial and the database is yours to keep.",
   },
   {
     question: "Can I run agents while rehab is happening?",
@@ -198,8 +198,8 @@ export default function DataRehabPage() {
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             Most construction companies have the same problem: years of ERP data that&apos;s messy,
             duplicated, and out of sync. Before AI can help, that data needs to be rehabilitated.
-            Data Rehab typically <span className="text-white font-semibold">$25k–$75k</span>,
-            scoped after your free diagnostic. We don&apos;t charge you until it&apos;s done.
+            Data Rehab starts at <span className="text-white font-semibold">$5k</span> — cheap enough
+            for a CFO to expense without board approval. We don&apos;t charge you until it&apos;s done.
           </p>
           {/* CHANGED: CTA buttons → brand orange primary */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -240,28 +240,28 @@ export default function DataRehabPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="rounded-xl bg-white/5 border border-white/10 p-6 text-center">
                 <DollarSign className="w-8 h-8 text-[#FF6200] mx-auto mb-3" />
-                <p className="text-3xl font-black text-white mb-1">$52k</p>
-                <p className="text-slate-400 text-sm">Typical rehab cost</p>
+                <p className="text-3xl font-black text-white mb-1">$5k–$10k</p>
+                <p className="text-slate-400 text-sm">Data Rehab cost</p>
               </div>
               <div className="rounded-xl bg-white/5 border border-white/10 p-6 text-center">
                 <Calendar className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                <p className="text-3xl font-black text-white mb-1">&lt; 45 days</p>
-                <p className="text-slate-400 text-sm">Payback period</p>
+                <p className="text-3xl font-black text-white mb-1">&lt; 30 days</p>
+                <p className="text-slate-400 text-sm">Typical payback</p>
               </div>
               <div className="rounded-xl bg-white/5 border border-white/10 p-6 text-center">
                 <CheckCircle2 className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                <p className="text-3xl font-black text-white mb-1">$2.1M</p>
-                <p className="text-slate-400 text-sm">AR recovered in 90 days</p>
+                <p className="text-3xl font-black text-white mb-1">$140k</p>
+                <p className="text-slate-400 text-sm">AR recovered in 30 days</p>
               </div>
             </div>
 
             <p className="text-slate-300 text-sm leading-relaxed text-center max-w-2xl mx-auto">
-              Typical <span className="text-white font-semibold">$52k</span> rehab pays for itself
-              in <span className="text-white font-semibold">&lt; 45 days</span> via recovered AR alone.
-              Real client example: a $180M regional GC recovered{" "}
-              <span className="text-white font-semibold">$2.1M in overdue receivables</span> in the
-              first 90 days after clean data hit their collections agents.
-              That&apos;s a 40x return.
+              A <span className="text-white font-semibold">$7,500</span> rehab paid for itself
+              in <span className="text-white font-semibold">under 30 days</span> via recovered AR alone.
+              Real client: a $45M regional GC recovered{" "}
+              <span className="text-white font-semibold">$140k in overdue receivables</span> in the
+              first month after clean data hit their collections workflow.
+              That&apos;s an 18x return.
             </p>
           </div>
         </div>
@@ -338,7 +338,7 @@ export default function DataRehabPage() {
             </div>
             <div>
               {/* CHANGED: pricing language aligned with homepage */}
-              <div className="text-xs font-bold uppercase tracking-widest text-[#FF6200] mb-1">Stage 02 — Typically $25k–$75k (scoped after free diagnostic)</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-[#FF6200] mb-1">Stage 02 — Starting at $5k (scoped after free assessment)</div>
               <h2 className="text-white font-black text-2xl">Data Rehab</h2>
             </div>
           </div>
@@ -423,23 +423,24 @@ export default function DataRehabPage() {
             </div>
           </div>
 
-          {/* Cost & Timeline — CHANGED: aligned pricing with $25k–$75k */}
           <div className="mt-8 glass rounded-xl p-6 border border-[#FF6200]/20 bg-[#FF6200]/5">
-            <h3 className="text-white font-bold text-lg mb-4">Typical Costs &amp; Timeline</h3>
+            <h3 className="text-white font-bold text-lg mb-4">Simple Pricing. No Surprises.</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-3">Small Engagements</p>
-                <p className="text-2xl font-black text-[#FF6200] mb-1">$25k–$35k</p>
-                <p className="text-slate-400 text-sm">3–4 weeks | Single ERP, minimal deduplication</p>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-3">Basic</p>
+                <p className="text-2xl font-black text-[#FF6200] mb-1">$5,000</p>
+                <p className="text-slate-400 text-sm">2–3 weeks | Single ERP, 1–2 years data, core cleanup</p>
+                <p className="text-slate-500 text-xs mt-1">Best for $10M–$50M GCs on QuickBooks, Procore, or Foundation</p>
               </div>
               <div>
-                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-3">Larger Engagements</p>
-                <p className="text-2xl font-black text-[#FF6200] mb-1">$50k–$75k</p>
-                <p className="text-slate-400 text-sm">5–8 weeks | Multi-system, heavy reconciliation</p>
+                <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-3">Pro</p>
+                <p className="text-2xl font-black text-[#FF6200] mb-1">$7,500–$10,000</p>
+                <p className="text-slate-400 text-sm">3–4 weeks | Multi-system, 3+ years, advanced anomaly rules</p>
+                <p className="text-slate-500 text-xs mt-1">Best for $50M+ firms with Sage, Viewpoint, or multi-entity setups</p>
               </div>
             </div>
             <p className="text-slate-400 text-xs mt-5 pt-5 border-t border-[#FF6200]/20">
-              <span className="text-[#FF6200] font-semibold">Note:</span> These are typical ranges. The free diagnostic scopes the exact price, timeline, and deliverables for your data.
+              <span className="text-[#FF6200] font-semibold">Guarantee:</span> Pay only after you verify the clean data in your own tools. Both tiers include a 1-week free Jake agent trial and the database is yours to keep — use it with any AI platform.
             </p>
           </div>
         </div>
@@ -487,7 +488,7 @@ export default function DataRehabPage() {
               </div>
             </div>
             <p className="text-slate-500 text-xs pt-4 border-t border-green-500/20">
-              This company would have spent $300k+ in bad decisions based on misaligned data. The rehab investment paid for itself in the first month.
+              The $7,500 rehab paid for itself in the first month via recovered AR alone. The controller said it was the best expense report he ever submitted.
             </p>
           </div>
         </div>

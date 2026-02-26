@@ -19,10 +19,10 @@ const STAGES = [
     icon: Wrench,
     title: "Data Rehab",
     description:
-      "We normalize your ERP, close the gaps, clean the duplicates, and patch the reconciliation issues. You get a certified, AI-ready data layer. Data Rehab typically $25k–$75k, scoped after your free diagnostic. We invoice on delivery — not kickoff.",
+      "We normalize your ERP, close the gaps, clean the duplicates, and patch the reconciliation issues. You get a database you own — AI-ready and usable anywhere. Starting at $5k. We invoice on delivery — not kickoff.",
     color: "#f59e0b",
-    details: ["ERP normalization (BC, SQL Server)", "Reconciliation gap closure", "Canonical schema delivery", "AI-ready certification"],
-    label: "$25k–$75k scoped",
+    details: ["ERP normalization (BC, SQL Server, Sage)", "Reconciliation gap closure", "Database you own — use with any AI", "AI-ready certification"],
+    label: "From $5k",
   },
   {
     number: "03",

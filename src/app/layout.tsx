@@ -49,7 +49,7 @@ const localBusinessSchema = {
     "AR Collections Automation",
     "Job Costing AI",
   ],
-  priceRange: "$3K–$15K/mo",
+  priceRange: "$5K–$15K/mo",
   email: "hello@jakecfo.com",
   sameAs: [
     "https://www.linkedin.com/company/jakecfo",
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "How much does Jake cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Jake starts with a free AI Readiness Diagnostic. Data Rehab (cleaning your ERP data) is typically $25K–$75K scoped after the diagnostic. The ongoing agent platform runs $3K–$15K/month based on which agent pack you choose.",
+        text: "Jake starts with a free AI Readiness Assessment. Data Rehab (cleaning your ERP data) starts at $5K for the Basic tier and $7.5K–$10K for Pro. The ongoing agent platform runs $3K–$15K/month. A $500–$1K/month data maintenance option is also available.",
       },
     },
     {

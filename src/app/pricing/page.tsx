@@ -41,50 +41,51 @@ const STAGES = [
   {
     number: "01",
     icon: Stethoscope,
-    label: "Free Diagnostic",
-    name: "AI Readiness Health Test",
-    tagline: "We show you exactly what's broken.",
+    label: "Free Assessment",
+    name: "AI Readiness Assessment",
+    tagline: "We show you exactly what's broken — for free.",
     description:
-      "We analyze your financial data and deliver a plain-English report showing what's preventing AI from working in your business. No fixes yet — just an honest diagnosis.",
+      "One call + a data export. Jake runs 200+ automated checks and delivers a plain-English report: your Data Quality Score, every gap named, and a dollar estimate of what dirty data is costing you. Actionable whether you hire us or not.",
     price: "Free",
-    priceNote: "No commitment, no credit card",
+    priceNote: "No commitment, no credit card, no consultant-speak",
     color: "#3b82f6",
     deliverables: [
-      "Data quality score (0–100)",
-      "AR integrity and aging check",
+      "Data Quality Score (0–100)",
+      "AR integrity and aging accuracy check",
       "GL balance sanity check",
-      "Vendor and customer duplication analysis",
-      "Sync latency and staleness audit",
-      "Full reconciliation report",
-      "AI Readiness Score with action items",
+      "Vendor and customer duplication scan",
+      "Cost code mapping audit",
+      "Estimated cost of dirty data (in dollars)",
+      "Prioritized fix list with effort estimates",
     ],
-    cta: "Schedule Free Diagnostic",
+    cta: "Schedule Free Assessment",
     ctaHref: "/diagnostic",
     highlight: false,
   },
   {
     number: "02",
     icon: Wrench,
-    label: "Paid Data Rehab",
-    name: "Data Rehab",
-    tagline: "We fix it. You don't pay until it's clean.",
+    label: "Data Rehab",
+    name: "AI-Ready Data Starter Pack",
+    tagline: "Clean data you own. $5k–$10k. Done in 2–4 weeks.",
     description:
-      "We clean your data and hand you a database you fully own — reconciled, normalized, and AI-ready. Hosted where you choose. The deliverable is yours whether or not you ever run an agent. Scoped after the diagnostic. Invoiced on delivery.",
-    price: "Scoped after diagnostic",
-    priceNote: "Flat fee. Invoiced on delivery, not kickoff.",
-    color: "#f59e0b",
+      "We clean your ERP data and hand you a database you fully own — reconciled, normalized, and ready for any AI tool. Not locked to Jake. Use it with ChatGPT, your own scripts, or any platform you want. But we'll include Jake-optimized fields so you can see the difference immediately.",
+    price: "$5k–$10k",
+    priceNote: "Pay only after you verify the clean data in your own tools",
+    color: "#FF6200",
     deliverables: [
-      "Canonical financial schema",
-      "Reconciled GL, AR, and AP tables",
-      "Duplicate and key cleanup",
-      "ERP normalization (BC, SQL Server, CSV)",
-      "Incremental sync activation",
-      "Data Quality dashboard",
-      "AI-ready certification report",
+      "Basic ($5k) — single ERP, 1–2 years data, core cleanup",
+      "Pro ($7.5k–$10k) — multi-system, 3+ years, advanced anomaly rules",
+      "Cleaned, AI-ready database you fully own",
+      "Incremental sync scripts to keep data fresh from your ERP",
+      "Deduplication (vendors, customers, cost codes)",
+      "GL ↔ AR ↔ AP reconciliation",
+      "Quick-win report: recovered AR opportunities in dollars",
+      "1-week free Jake agent trial on your clean data",
     ],
-    cta: "Book a Scoping Call",
-    ctaHref: "/demo",
-    highlight: false,
+    cta: "Schedule Free Assessment First",
+    ctaHref: "/diagnostic",
+    highlight: true,
   },
   {
     number: "03",
@@ -93,9 +94,9 @@ const STAGES = [
     name: "Agent Trial",
     tagline: "See it run on your data. No hype.",
     description:
-      "Once your data is clean, we activate a guided 7-day trial on your real numbers. You'll see AR collections, cash position, anomaly detection, and close acceleration working on your actual books.",
+      "Included free after Data Rehab. We activate a guided 7-day trial on your real numbers — AR collections, cash position, anomaly detection, and close acceleration. You see exactly what AI does with clean data before committing to anything.",
     price: "Free",
-    priceNote: "Included after Data Rehab",
+    priceNote: "Included with every Data Rehab",
     color: "#10b981",
     deliverables: [
       "AR Collections agent on your invoices",
@@ -106,9 +107,9 @@ const STAGES = [
       "Guided by Jake's team",
       "Go/no-go decision at day 7",
     ],
-    cta: "Schedule the Diagnostic",
+    cta: "Start with the Free Assessment",
     ctaHref: "/diagnostic",
-    highlight: true,
+    highlight: false,
   },
   {
     number: "04",
@@ -117,17 +118,17 @@ const STAGES = [
     name: "Jake Agent Platform",
     tagline: "18 agents. Every dollar. One control plane.",
     description:
-      "After the trial, you choose your pack. All plans include the clean data layer, live ERP sync, and the full trust and governance architecture.",
+      "After the trial, you choose your pack. All plans include the clean data layer, live ERP sync, and the full trust and governance architecture. Already did the rehab? You're 80% there.",
     price: "$3k–$15k/mo",
-    priceNote: "Tier based on agent pack and revenue scale",
+    priceNote: "Tier based on agent pack and company size",
     color: "#8b5cf6",
     deliverables: [
-      "Monitoring Pack ($3k–$8k/mo) — sync, quality gates, alerts, AI search",
-      "Operational Pack ($5k–$10k/mo) — AR, cash, AP automation, close checklist",
-      "CFO Intelligence ($10k–$15k+/mo) — custom agents, board dashboards, M&A readiness",
+      "Monitoring Pack ($3k–$5k/mo) — sync, quality gates, alerts, AI search",
+      "Operational Pack ($5k–$8k/mo) — AR, cash, AP automation, close checklist",
+      "CFO Intelligence ($8k–$15k/mo) — custom agents, board dashboards, M&A readiness",
+      "Data Maintenance bolt-on ($500–$1k/mo) — keep syncs running without full agents",
       "All packs: 18 agents, trust layer, full audit trail",
       "All packs: SOC 2–aligned controls",
-      "All packs: dedicated support team on speed dial",
     ],
     cta: "See the Full Platform",
     ctaHref: "/agents",
@@ -142,30 +143,32 @@ export default function PricingPage() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
-            The Hybrid Model
+          <div className="inline-block px-4 py-1.5 rounded-full border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] text-sm font-medium mb-4">
+            Built to Be Accessible
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5">
-            Data Rehab →{" "}
-            <span className="gradient-text">AI Trial → Agent Platform.</span>
+            Free assessment.{" "}
+            <span className="gradient-text-orange">$5k data rehab.</span>
+            <br />
+            <span className="text-slate-400 text-2xl sm:text-3xl md:text-4xl">AI-ready in weeks, not months.</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
             Most construction companies can&apos;t use AI because their data is a mess.
-            We fix that first — then we prove what AI can do on your actual numbers — then
-            we hand you a platform that runs your finances.
+            We fix that for $5k–$10k — not $50k. You get a clean database you own,
+            a free agent trial, and a clear path to the full platform.
           </p>
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-slate-400">
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Free diagnosis — no commitment
+              Free assessment — no commitment
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              We don&apos;t invoice until data is AI-ready
+              Data Rehab from $5k — CFO can expense it
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Trial runs on your real data
+              You own the clean database — use it anywhere
             </span>
           </div>
         </div>
@@ -272,14 +275,14 @@ export default function PricingPage() {
           <div className="absolute -bottom-2 left-8 hidden lg:block -rotate-2">
             <JakeMascot quote="I wrote that one." size={72} bubbleSide="right" />
           </div>
-          <Zap className="w-8 h-8 text-amber-400 mx-auto mb-4" />
+          <Zap className="w-8 h-8 text-[#FF6200] mx-auto mb-4" />
           <h3 className="text-white font-black text-2xl mb-3">
-            We don&apos;t get paid until your data is AI-ready.
+            Pay only after you verify the clean data yourself.
           </h3>
           <p className="text-slate-400 text-sm max-w-2xl mx-auto leading-relaxed">
-            That&apos;s not a marketing line. We invoice Data Rehab on delivery — after the quality
-            gates pass and the reconciliation report is documented. If we can&apos;t get your data clean,
-            you owe us nothing. That&apos;s how confident we are in the process.
+            That&apos;s the deal. We deliver the clean database. You check it in your own tools.
+            Quality gates pass. Then — and only then — we invoice. If we can&apos;t get your
+            data clean, you pay nothing. $5k–$10k that a CFO can expense without board approval.
           </p>
         </div>
 

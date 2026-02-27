@@ -39,15 +39,15 @@ export function HowFastItStarts() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium mb-6">
             Getting Started
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
             Up and running in days.
             <br />
             <span className="gradient-text">Not months.</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
             We&apos;ve seen too many &ldquo;implementations&rdquo; become 6-month IT projects.
             Jake is different. Here&apos;s how it actually goes.
           </p>

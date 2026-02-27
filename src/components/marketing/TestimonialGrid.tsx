@@ -211,15 +211,15 @@ export function TestimonialGrid({
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <div className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium mb-6">
               Real Results
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
               CFOs don&apos;t give testimonials
               <br />
               <span className="gradient-text-orange">unless the numbers are real.</span>
             </h2>
-            <p className="text-slate-400 text-lg max-w-xl mx-auto">
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
               Anonymized clients. Real metrics. Every quote below came from
               a construction finance leader using Jake on their live books.
             </p>

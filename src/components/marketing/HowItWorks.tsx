@@ -59,15 +59,15 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-6">
             The Hybrid Model
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
             Data Rehab → AI Trial →
             <br />
             <span className="gradient-text">Agent Platform.</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
             Most construction companies can&apos;t use AI because their data is a mess.
             We fix that first. Then we prove it works on your numbers. Then we hand you the platform.
           </p>

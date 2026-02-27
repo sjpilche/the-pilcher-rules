@@ -100,7 +100,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
             &copy; {new Date().getFullYear()} Jake CFO &middot; All rights
-            reserved.
+            reserved. A product of Pilcher Advisors, LLC.
           </p>
           <div className="flex items-center gap-6">
             <Link

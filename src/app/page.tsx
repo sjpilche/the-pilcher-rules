@@ -67,15 +67,15 @@ export default function HomePage() {
       <section id="what-jake-does" className="py-24 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <div className="inline-block px-4 py-1.5 rounded-full border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] text-sm font-medium mb-6">
               What Jake Covers
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
               Every corner of your construction finances.
               <br />
               <span className="gradient-text-orange">Covered.</span>
             </h2>
-            <p className="text-slate-400 text-lg max-w-xl mx-auto">
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
               Every agent is purpose-built for a specific corner of construction
               finance — and they all talk to each other through the CFO Manager.
             </p>

@@ -41,7 +41,7 @@ const STAGES = [
     description:
       "After the trial you choose your pack. Every tier runs on your clean data layer with full trust governance, SOC 2–aligned controls, and live ERP sync. No spreadsheets. No surprises.",
     color: "#8b5cf6",
-    details: ["Monitoring, Operational, or CFO Intelligence pack", "All 18 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
+    details: ["Monitoring, Operational, or CFO Intelligence pack", "All 27 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
     label: "Subscription",
   },
 ];

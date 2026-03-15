@@ -48,7 +48,7 @@ function getHeroVariant(): HeroVariant {
 }
 
 const STATS = [
-  { value: "18", label: "Specialized Agents" },
+  { value: "27", label: "Specialized Agents" },
   { value: "100+", label: "KPIs Monitored Daily" },
   { value: "48", label: "Anomaly Detection Rules" },
   { value: "85.3%", label: "Job Cost ML Accuracy" },

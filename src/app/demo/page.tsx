@@ -53,7 +53,7 @@ export default function DemoPage() {
             <p className="text-slate-500 text-sm">
               Already exploring?{" "}
               <Link href="/agents" className="text-blue-400 hover:text-blue-300 underline">
-                Browse all 18 agents
+                Browse all 27 agents
               </Link>{" "}
               first.
             </p>

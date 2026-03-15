@@ -116,7 +116,7 @@ const STAGES = [
     icon: Building2,
     label: "Full Agent Platform",
     name: "Jake Agent Platform",
-    tagline: "18 agents. Every dollar. One control plane.",
+    tagline: "27 agents. Every dollar. One control plane.",
     description:
       "After the trial, you choose your pack. All plans include the clean data layer, live ERP sync, and the full trust and governance architecture. Already did the rehab? You're 80% there.",
     price: "$3k–$15k/mo",
@@ -127,7 +127,7 @@ const STAGES = [
       "Operational Pack ($5k–$8k/mo) — AR, cash, AP automation, close checklist",
       "CFO Intelligence ($8k–$15k/mo) — custom agents, board dashboards, M&A readiness",
       "Data Maintenance bolt-on ($500–$1k/mo) — keep syncs running without full agents",
-      "All packs: 18 agents, trust layer, full audit trail",
+      "All packs: 27 agents, trust layer, full audit trail",
       "All packs: SOC 2–aligned controls",
     ],
     cta: "See the Full Platform",

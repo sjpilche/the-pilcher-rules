@@ -41,7 +41,7 @@ const STAGES = [
     description:
       "After the trial you choose your pack. Every tier runs on your clean data layer with full trust governance, SOC 2–aligned controls, and live ERP sync. No spreadsheets. No surprises.",
     color: "#8b5cf6",
-    details: ["Monitoring, Operational, or CFO Intelligence pack", "All 27 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
+    details: ["Monitoring, Operational, or CFO Intelligence pack", "All 18 agents coordinated by CFO Manager", "Trust layer + full audit trail", "$3k–$15k/mo based on scope"],
     label: "Subscription",
   },
 ];
@@ -60,12 +60,12 @@ export function HowItWorks() {
           className="text-center mb-20"
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-6">
-            The Hybrid Model
+            The Jake Proof Stack
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
-            Data Rehab → AI Trial →
+            Inspect. Repair. Prove.
             <br />
-            <span className="gradient-text">Agent Platform.</span>
+            <span className="gradient-text">Then scale.</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
             Most construction companies can&apos;t use AI because their data is a mess.

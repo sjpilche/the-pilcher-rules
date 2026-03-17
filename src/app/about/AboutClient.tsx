@@ -139,7 +139,7 @@ export function AboutClient() {
                 <div className="relative glass rounded-2xl p-10">
                   <div className="text-6xl text-blue-500/30 font-black leading-none mb-4">&ldquo;</div>
                   <p className="text-white text-xl font-semibold leading-relaxed mb-6">
-                    Think of Jake as the operations analyst that never sleeps and never forgets to follow up.
+                    Think of Jake as the analyst who catches the AR aging before it's a write-off, flags the job margin before it's a loss, and closes the month before your team has started the spreadsheet.
                   </p>
                   <div className="h-px bg-white/10 mb-6" />
                   <p className="text-slate-400 text-sm">

@@ -107,6 +107,8 @@ const faqSchema = {
 export const metadata: Metadata = {
   other: {
     "facebook-domain-verification": "r7cevgbjbjz7ehl4lgrm67extdj4tv",
+    // TODO: Replace with real GSC verification token from Google Search Console → Settings → Ownership verification → HTML tag
+    // "google-site-verification": "REPLACE_WITH_GSC_TOKEN",
   },
   title: {
     default: "Jake — Your Construction AI CFO",
@@ -128,7 +130,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jake — Your Construction AI CFO",
     description:
-      "18 specialized AI agents. One construction CFO that never sleeps.",
+      "18 specialized AI agents. Construction finance, without the blind spots.",
     type: "website",
     locale: "en_US",
     url: "https://jakecfo.com",
@@ -137,7 +139,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jake — Your Construction AI CFO",
     description:
-      "18 specialized AI agents. One construction CFO that never sleeps.",
+      "18 specialized AI agents. Construction finance, without the blind spots.",
   },
   metadataBase: new URL("https://jakecfo.com"),
 };

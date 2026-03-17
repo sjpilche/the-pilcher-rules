@@ -1,9 +1,13 @@
 import { Hero } from "@/components/marketing/Hero";
+import { ConstructionPainSection } from "@/components/marketing/ConstructionPainSection";
+import { HowItWorks } from "@/components/marketing/HowItWorks";
 import { AgentGrid } from "@/components/marketing/AgentGrid";
 import { WhatJakeDoesDaily } from "@/components/marketing/WhatJakeDoesDaily";
-import { HowItWorks } from "@/components/marketing/HowItWorks";
-import { HowFastItStarts } from "@/components/marketing/HowFastItStarts";
+import { ProofArtifacts } from "@/components/marketing/ProofArtifacts";
 import { WhoItsFor } from "@/components/marketing/WhoItsFor";
+import { DataRehabCTABlock } from "@/components/marketing/DataRehabCTABlock";
+import { FounderTrust } from "@/components/marketing/FounderTrust";
+import { HowFastItStarts } from "@/components/marketing/HowFastItStarts";
 import { TestimonialGrid } from "@/components/marketing/TestimonialGrid";
 import { CaseStudyCard } from "@/components/marketing/CaseStudyCard";
 import { FinalCTA } from "@/components/marketing/FinalCTA";
@@ -62,57 +66,75 @@ export default function HomePage() {
 
       <Hero />
 
-      {/* ── WHAT JAKE COVERS ── */}
-      {/* CHANGED: id added for jump link, limit 8 → 6 for above-the-fold, brand orange */}
-      <section id="what-jake-does" className="py-24 scroll-mt-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <div className="inline-block px-4 py-1.5 rounded-full border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] text-sm font-medium mb-6">
-              What Jake Covers
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
-              Every corner of your construction finances.
-              <br />
-              <span className="gradient-text-orange">Covered.</span>
-            </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-              Every agent is purpose-built for a specific corner of construction
-              finance — and they all talk to each other through the CFO Manager.
-            </p>
-          </div>
-          {/* CHANGED: limit 8 → 6 — first 6 cards above the fold */}
-          <AgentGrid limit={6} />
-          <div className="text-center mt-10">
-            {/* CHANGED: brand orange border/hover */}
-            <a
-              href="/agents"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#FF6200]/20 text-slate-300 hover:text-white hover:border-[#FF6200]/40 font-medium transition-all hover:bg-[#FF6200]/5"
-            >
-              View all 18 &rarr;
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <WhatJakeDoesDaily />
+      {/* ── 1. VILLAIN / PAIN SECTION ── */}
+      <ConstructionPainSection />
       <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
 
-      {/* CHANGED: Wrapped in div with id for jump link anchor */}
+      {/* ── 2. THE JAKE PROOF STACK (4-step model) ── */}
       <div id="how-it-works" className="scroll-mt-28">
         <HowItWorks />
       </div>
       <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
 
-      <HowFastItStarts />
+      {/* ── 3. TOP 5 AGENTS ── */}
+      <section id="what-jake-does" className="py-24 scroll-mt-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-[#FF6200]/30 bg-[#FF6200]/10 text-[#FF6200] text-sm font-medium mb-6">
+              Start here
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]">
+              Five workflows that change the numbers
+              <br />
+              <span className="gradient-text-orange">in the first 30 days.</span>
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+              Start with these five. Each one runs on your clean data, produces
+              a visible output, and links to the next problem downstream.
+            </p>
+          </div>
+          <AgentGrid limit={5} />
+          <div className="text-center mt-10">
+            <a
+              href="/agents"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#FF6200]/20 text-slate-300 hover:text-white hover:border-[#FF6200]/40 font-medium transition-all hover:bg-[#FF6200]/5"
+            >
+              See all 18 agents &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
       <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
 
-      {/* CHANGED: Wrapped in div with id for jump link anchor */}
+      {/* ── 4. WHAT JAKE ACTUALLY DOES (day-in-life) ── */}
+      <WhatJakeDoesDaily />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
+
+      {/* ── 5. PROOF ARTIFACTS ── */}
+      <div id="proof" className="scroll-mt-28">
+        <ProofArtifacts />
+      </div>
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
+
+      {/* ── 5b. FOUNDER TRUST ── */}
+      <FounderTrust />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
+
+      {/* ── 6. GOOD FIT / NOT A FIT ── */}
       <div id="is-jake-right" className="scroll-mt-28">
         <WhoItsFor />
       </div>
       <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
 
-      {/* ── RESULTS: Testimonials + Case Study ── */}
+      {/* ── 7. DATA REHAB CTA BLOCK ── */}
+      <DataRehabCTABlock />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
+
+      {/* ── 8. HOW FAST IT STARTS ── */}
+      <HowFastItStarts />
+      <div className="max-w-xs mx-auto"><div className="i-beam" /></div>
+
+      {/* ── 9. RESULTS: Testimonials + Case Study ── */}
       <div id="results" className="scroll-mt-28">
         <TestimonialGrid />
         <CaseStudyCard />

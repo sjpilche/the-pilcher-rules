@@ -7,8 +7,8 @@ import Image from "next/image";
 import { ArrowRight, HardHat, ShieldCheck, TrendingUp, Database } from "lucide-react";
 
 /* ─── A/B Test: Hero Variants ──────────────────────────────────────
-   Variant A (control): "Your CFO Never Sleeps."
-   Variant B (challenger): "Stop Losing Money You Already Earned."
+   Variant A (control): Construction pain-first — AR/ERP/margin focus
+   Variant B (challenger): "Stop Losing Money You Already Earned." — cash recovery focus
    Assignment is sticky per session via sessionStorage.
    Track via GA4 event: gtag('event','hero_variant',{variant:'A'|'B'})
    ─────────────────────────────────────────────────────────────────── */
@@ -16,14 +16,14 @@ type HeroVariant = "A" | "B";
 
 const HERO_COPY: Record<HeroVariant, { headline: string; highlightLine: string; subHeadline: string }> = {
   A: {
-    headline: "Your CFO",
-    highlightLine: "Never Sleeps.",
-    subHeadline: "18 AI agents running your construction finances. You run the business.",
+    headline: "Stop losing cash to stale AR,",
+    highlightLine: "dirty ERP data, and margin surprises.",
+    subHeadline: "Jake audits the mess, cleans the data, and proves ROI on your real books before you commit to the platform.",
   },
   B: {
     headline: "Stop Losing Money",
     highlightLine: "You Already Earned.",
-    subHeadline: "$2.1M recovered in 90 days. 18 AI agents that collect, protect, and forecast — automatically.",
+    subHeadline: "$2.1M recovered in 90 days. Jake finds the leaks, cleans the data, and runs the workflows — on your real job cost numbers.",
   },
 };
 
@@ -48,10 +48,10 @@ function getHeroVariant(): HeroVariant {
 }
 
 const STATS = [
-  { value: "27", label: "Specialized Agents" },
+  { value: "18", label: "Finance Agents" },
   { value: "100+", label: "KPIs Monitored Daily" },
   { value: "48", label: "Anomaly Detection Rules" },
-  { value: "85.3%", label: "Job Cost ML Accuracy" },
+  { value: "11-day", label: "Avg to First Recovered Dollar" },
 ];
 
 const PILLS = [
@@ -93,7 +93,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#FF6200]/40 bg-[#FF6200]/10 text-[#FF6200] text-sm font-semibold mb-8 shadow-lg shadow-[#FF6200]/10"
         >
           <HardHat className="w-4 h-4" />
-          The AI CFO built for construction
+          Construction finance, without the blind spots
         </motion.div>
 
         {/* A/B tested headline — variant assigned per session */}
@@ -178,11 +178,31 @@ export function Hero() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
           <Link
-            href="/agents"
+            href="/demo"
             className="flex items-center gap-2 px-8 py-4 rounded-xl border border-[#FF6200]/20 text-slate-200 hover:text-white hover:border-[#FF6200]/40 font-semibold text-lg transition-all duration-200 hover:bg-[#FF6200]/5"
           >
-            See All 18 Agents
+            See Live Demo
           </Link>
+        </motion.div>
+
+        {/* Proof bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-16 text-sm text-slate-500"
+        >
+          {[
+            "Free diagnostic",
+            "Data Rehab starts at $5k",
+            "1-week trial on your data",
+            "No invoice until quality gates pass",
+          ].map((item, i) => (
+            <span key={item} className="flex items-center gap-2">
+              {i > 0 && <span className="hidden sm:inline text-slate-700">·</span>}
+              <span>{item}</span>
+            </span>
+          ))}
         </motion.div>
 
         {/* CHANGED: Stats bar → brand orange accent */}
